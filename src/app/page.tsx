@@ -12,9 +12,11 @@ import TestButton from "./components/TestButton/TestButton";
 export default function Home() {
   const router = useRouter()
 
-  function handleDesignClick() {
-    console.log('design click');
+  function goToReact() {
+    window.open('https://troybedingfield.com')
   }
+
+
   return (
 
 
@@ -120,6 +122,16 @@ export default function Home() {
 
         </div>
 
+      </div>
+
+      <div className="angular-version">
+        <div className="angular-inner-container">
+          <p className="text-center">Click to see an Angular version of this site</p>
+          <div className="button-container">
+
+            <Button buttonClick={goToReact}>Angular</Button>
+          </div>
+        </div>
       </div>
 
       <div className="contact-form">
