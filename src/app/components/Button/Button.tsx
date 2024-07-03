@@ -17,6 +17,6 @@ export default function Button({ ...props }) {
     } = props
 
     return (
-        <button style={{ minWidth: minWidth + 'px', maxWidth: maxWidth + 'px' }} className={[color, fill, size].join(' ')} onClick={buttonClick}>{children}</button>
+        <button style={{ minWidth: minWidth + 'px', maxWidth: maxWidth + 'px' }} className={[color, fill, size, uppercase ? 'text-uppercase' : ''].join(' ')} onClick={buttonClick} disabled={disabled ? disabled : null}>{children}</button>
     )
 }

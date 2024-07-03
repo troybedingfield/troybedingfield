@@ -63,7 +63,7 @@ export default function Carousel({ ...props }) {
 
     return (
         <div className="carousel-container" style={{ height: selHeight + 'px' }}>
-            <div className="carousel" ref={carouselId} onMouseEnter={pauseCarousel} onMouseLeave={startTimer} >
+            <div className="carousel" ref={carouselId}  >
 
 
 

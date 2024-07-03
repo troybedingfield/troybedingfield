@@ -7,6 +7,7 @@ import Button from "./components/Button/Button";
 import { useRouter } from "next/navigation";
 import Contact from "./components/Contact/Contact";
 import Toast from "./components/Toast/Toast";
+import TestButton from "./components/TestButton/TestButton";
 
 export default function Home() {
   const router = useRouter()
@@ -51,14 +52,20 @@ export default function Home() {
           href="https://troybedingfield.github.io/library-test/?path=/docs/local-button--docs" target="_blank"
           className="font24">Storybook Link</a></p>
         <br />
+
+        <TestButton />
       </div>
 
 
       <div className="figma-work">
         <div className="inner-container">
           <p className="text-center">Workflow Designs and Design System Components from Figma</p>
+
+          <Carousel automatic="true" interval="5000" selHeight={800} images={['carousel-home/4.png', 'carousel-home/1.png', 'carousel-home/2.png', 'carousel-home/3.png']} />
+
           <p className="text-center">Click to see more designs and prototypes of a user workflow</p>
           <div className="button-container">
+
             <Button buttonClick={() => router.push('/design')}>Design</Button>
           </div>
         </div>
