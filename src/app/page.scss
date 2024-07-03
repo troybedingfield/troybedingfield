@@ -1,0 +1,209 @@
+.home-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    padding: 24px 0;
+    gap: 12px;
+    background: rgba($color: #007cba, $alpha: 1);
+    // background: linear-gradient(0deg, rgba(0, 18, 54, 1) 4%, rgba(18, 121, 168, 1) 42%, rgba(0, 212, 255, 1) 80%, rgba(207, 247, 255, 1) 100%);
+    // background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 18, 54, 1) 32%, rgba(18, 121, 168, 1) 58%, rgba(0, 212, 255, 1) 80%, rgba(207, 247, 255, 1) 100%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 124, 186, 1) 55%);
+    justify-content: center;
+}
+
+
+
+.home-top-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 12px 24px 12px;
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+
+    & * {
+        color: white;
+    }
+}
+
+
+
+.saas-work {
+    background-color: rgba($color: white, $alpha: 0.98);
+    padding: 12px 0;
+
+
+    .inner-container {
+        max-width: 1280px;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+
+.component-example {
+    background-color: rgba($color: white, $alpha: 0.98);
+    padding: 12px 12px 24px 12px;
+    margin-top: -12px;
+
+
+    .inner-container {
+        max-width: 1280px;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+
+.marketing-work {
+    max-width: 1280px;
+    margin-top: 24px;
+    margin: 0 auto;
+    width: 100%;
+
+
+    & * {
+        color: white;
+    }
+
+    // a {
+    //     color: rgba(0, 212, 255, 1);
+    // }
+}
+
+.home-two-column {
+    display: flex;
+    width: 100%;
+    padding: 0 12px;
+    max-width: 1280px;
+    margin: 0 auto;
+
+    .column1 {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .column2 {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        justify-content: center;
+        padding: 0;
+
+        li {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .home-two-column {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+
+        .column1 {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .column2 {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            justify-content: center;
+            padding: 0;
+
+            li {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+
+.contact-form {
+    margin: 60px 0;
+
+    .form-inner-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 825px;
+        margin: 0 auto;
+        width: 100%;
+        padding: 0 12px;
+    }
+}
+
+
+.figma-work {
+    padding: 36px 0;
+    margin-top: -12px;
+    background-color: rgba($color: #001C29, $alpha: .6);
+
+    p {
+        color: white;
+    }
+
+    .inner-container {
+        max-width: 1280px;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+
+    }
+}
+
+
+#figma-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+    /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+
+    .responsive-iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+    }
+}

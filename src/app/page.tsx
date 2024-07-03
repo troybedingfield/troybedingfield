@@ -1,95 +1,137 @@
+'use client'
+
 import Image from "next/image";
-import styles from "./page.module.css";
+import "./page.scss";
+import Carousel from "./components/Carousel/Carousel";
+import Button from "./components/Button/Button";
+import { useRouter } from "next/navigation";
+import Contact from "./components/Contact/Contact";
+import Toast from "./components/Toast/Toast";
 
 export default function Home() {
+  const router = useRouter()
+
+  function handleDesignClick() {
+    console.log('design click');
+  }
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+
+
+    <div className="home-container">
+      <div className="home-top-text">
+
+        <h3 className="text-center font-black">Experienced Front-End Developer and UX/UI Designer with a demonstrated
+          history of working in the
+          marketing
+          and payroll
+          industries.
+        </h3>
+
+        <h4 className="text-center font-bold">Skilled in HTML, CSS, JavaScript, TypeScript, Angular, Figma</h4>
+
+        <h5 className="text-center font-regular">Also have experience with .NET, PHP, WordPress, Drupal</h5>
+
+        <h4 className="text-center font-medium">Professional with a Bachelor's of fine art focused in Graphic Design from
+          Georgia State
+          University.</h4>
+
+
+      </div>
+
+      <div className="saas-work">
+        <div className="inner-container">
+          <p className="text-center">Payroll/HR SaaS application:</p>
+          <img src="troy-homepage-montage-01.png" alt="saas-examples" />
         </div>
       </div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className="component-example">
+        <p className="text-center">Component Library Button Example:</p>
+        <p className="text-center">To see the full example setup and documentation <br /><br /> <a
+          href="https://troybedingfield.github.io/library-test/?path=/docs/local-button--docs" target="_blank"
+          className="font24">Storybook Link</a></p>
+        <br />
       </div>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className="figma-work">
+        <div className="inner-container">
+          <p className="text-center">Workflow Designs and Design System Components from Figma</p>
+          <p className="text-center">Click to see more designs and prototypes of a user workflow</p>
+          <div className="button-container">
+            <Button buttonClick={() => router.push('/design')}>Design</Button>
+          </div>
+        </div>
       </div>
-    </main>
+
+
+      <div className="marketing-work">
+        <p className="text-center">Marketing site's I've managed and/or built:</p>
+        <div className="home-two-column">
+
+          <div className="column1">
+            <ul>
+              <li>
+                <a href="https://iloveicecreamcakes.com" target="_blank">iloveicecreamcakes.com</a>
+              </li>
+              <li>
+                <a href="https://electrocore.com" target="_blank">electrocore.com</a>
+              </li>
+              <li>
+                <a href="https://gammacore.com" target="_blank">gammacore.com</a>
+              </li>
+              <li>
+                <a href="https://thiolaec.com" target="_blank">thiolaec.com</a>
+              </li>
+              <li>
+                <a href="https://farmrich.com" target="_blank">farmrich.com</a>
+              </li>
+
+            </ul>
+          </div>
+          <div className="column2">
+            <ul>
+              <li>
+                <a href="https://emflaza.com" target="_blank">emflaza.com</a>
+              </li>
+              <li>
+                <a href="https://ptccares.com" target="_blank">ptccares.com</a>
+              </li>
+              <li>
+                <a href="https://thiolaechcp.com" target="_blank">thiolaechcp.com</a>
+              </li>
+              <li>
+                <a href="https://seapak.com" target="_blank">seapak.com</a>
+              </li>
+              <li>
+                <a href="https://askewmarketing.com" target="_blank">askewmarketing.com</a>
+              </li>
+
+            </ul>
+          </div>
+
+
+        </div>
+
+      </div>
+
+      <div className="contact-form">
+        <div className="form-inner-container">
+          <Contact />
+
+        </div>
+      </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
   );
 }
