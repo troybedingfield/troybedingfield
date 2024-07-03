@@ -32,7 +32,7 @@ export default function Home() {
 
         <h5 className="text-center font-regular">Also have experience with .NET, PHP, WordPress, Drupal</h5>
 
-        <h4 className="text-center font-medium">Professional with a Bachelor's of fine art focused in Graphic Design from
+        <h4 className="text-center font-medium">Professional with a Bachelor&apos;s of fine art focused in Graphic Design from
           Georgia State
           University.</h4>
 
@@ -73,7 +73,7 @@ export default function Home() {
 
 
       <div className="marketing-work">
-        <p className="text-center">Marketing site's I've managed and/or built:</p>
+        <p className="text-center">Marketing site&apos;s I&apos;ve managed and/or built:</p>
         <div className="home-two-column">
 
           <div className="column1">
