@@ -5,8 +5,7 @@ import './Contact.scss'
 
 import ReCAPTCHA from "react-google-recaptcha";
 
-const SITE_KEY = '6LcvSfApAAAAAKHZLwncTat926y89UVN3ySnK2aO'
-const SITE_SECRET = '6LcvSfApAAAAAIVK1Y0mkFgexJX21_TqcIG2Thzf'
+
 
 
 export default function Contact({ ...props }) {
@@ -100,7 +99,7 @@ export default function Contact({ ...props }) {
                         {/* <re-captcha (resolved)="resolved($event)" siteKey="{{SITE_KEY}}">
             </re-captcha> */}
                     </div>
-                    <ReCAPTCHA ref={recaptcha} sitekey={SITE_KEY} />
+                    <ReCAPTCHA ref={recaptcha} sitekey={process.env.NEXT_PUBLIC_SITE_KEY!} />
                     <Button maxWidth={88}
 
                     >Submit</Button>
