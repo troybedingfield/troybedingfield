@@ -2,8 +2,8 @@
 const nextConfig = {
     output: "export",
     reactStrictMode: true,
-    // basePath: '/react-troybedingfield',
-    // assetPrefix: "/react-troybedingfield/",
+    basePath: '/react-troybedingfield',
+    assetPrefix: "/react-troybedingfield/",
 };
 
 export default nextConfig;
