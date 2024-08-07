@@ -32,6 +32,9 @@ export default function Design() {
     function userFlowLink() {
         window.open('https://www.figma.com/design/JhyHuflMdoV9qNb7tXCyeU/User-Flow?node-id=193-27021&t=FHbdYcUXeDaHUdGM-1')
     }
+    function userJourneyLink() {
+        window.open('https://www.figma.com/design/CmmNz4sHeCNusCYu9HByHo/User-Journey-and-Flow?node-id=0-1&t=e3uLcWoGPcL0L5sn-1')
+    }
     function designSystemLink() {
         window.open('https://www.figma.com/design/rOj7ptt7KWZOZdNt2cen4n/Design-System?node-id=1-26&t=GDn677E0etS2kMeb-1')
     }
@@ -64,7 +67,14 @@ export default function Design() {
                     <Carousel selHeight={500} images={['design-section-2/1.png', 'design-section-2/2.png', 'design-section-2/3.png', 'design-section-2/4.png', 'design-section-2/5.png', 'design-section-2/6.png', 'design-section-2/7.png', 'design-section-2/8.png']} />
                 </div>
 
-
+                <div className="user-flow-container">
+                    <div className="inner-container">
+                        <p className="text-center">Created responsive designs and setup prototypes for a user flow with another designer
+                            for a new product we were working on while building out the design system so we could refine and add
+                            components and prototyping sections to make it easier for the UX team to create in Figma </p>
+                        <Button buttonClick={userFlowLink}>Figma Link</Button>
+                    </div>
+                </div>
 
             </div>
 
@@ -98,12 +108,21 @@ export default function Design() {
             </div>
 
 
-            <div className="user-flow-container">
+
+
+
+            <div className="journeyAndFlows top-section">
+                <h3 className="text-center">Figma user journey and user flows</h3>
+                <div className="inner-carousel-container top-section">
+                    <Carousel selHeight={500} images={['design-section-3/journey.png', 'design-section-3/group1.png', 'design-section-3/group2.png', 'design-section-3/group3.png']} />
+                </div>
+
+            </div>
+
+            <div className="figma-work bottom-container">
                 <div className="inner-container">
-                    <p className="text-center">Created responsive designs and setup prototypes for a user flow with another designer
-                        for a new product we were working on while building out the design system so we could refine and add
-                        components and prototyping sections to make it easier for the UX team to create in Figma </p>
-                    <Button buttonClick={userFlowLink}>Figma Link</Button>
+                    <p className="text-center">Click to see user journey with user flows</p>
+                    <Button buttonClick={userJourneyLink}>Figma Link</Button>
                 </div>
             </div>
 

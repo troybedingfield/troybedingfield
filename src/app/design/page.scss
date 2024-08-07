@@ -59,6 +59,50 @@
 }
 
 
+.journeyAndFlows {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // padding: 0 12px 24px 12px;
+    // max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+
+    & * {
+        color: white;
+    }
+
+    .inner-carousel-container {
+        // max-width: 730px;
+        // display: flex;
+        // position: relative;
+        // margin: 0 auto;
+        // width: 100%;
+
+        max-width: 1280px;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 100%;
+
+        &.top-section {
+            max-width: 800px;
+        }
+    }
+
+    .inner-container {
+        max-width: 1280px;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 100%;
+        align-items: center;
+    }
+
+
+}
+
+
 
 .design-system-container {
     display: flex;
@@ -226,6 +270,9 @@
     }
 }
 
+.bottom-container {
+    padding: 48px 0;
+}
 
 @media screen and (max-width:559px) and (min-width: 320px) {
     ::ng-deep .carousel-container {
