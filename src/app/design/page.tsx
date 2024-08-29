@@ -4,9 +4,11 @@ import Button from '../components/Button/Button'
 import './page.scss'
 import Carousel from '../components/Carousel/Carousel';
 import Toast from '../components/Toast/Toast';
+import Image from 'next/image'
+import { useRouter } from 'next/navigation';
 
 export default function Design() {
-
+    const router = useRouter()
     const [showDesktop, setShowDesktop] = useState(false);
     const [showTablet, setShowTablet] = useState(false);
     const [showMobile, setShowMobile] = useState(false);
@@ -41,6 +43,17 @@ export default function Design() {
 
     return (
         <div className="design-container">
+
+            <div className="design-system-container">
+                <h3 className="text-center">Mobile App Case Study</h3>
+                <div className="img-container">
+                    <img style={{ maxWidth: 1024 }} src="casestudy/csimage1.png" alt={''} />
+                </div>
+                <div className="button-container">
+                    <Button color="secondary" buttonClick={() => router.push('/design/casestudy')}>View Case Study</Button>
+
+                </div>
+            </div>
 
             <div className="design-system-container">
                 <h3 className="text-center">Design system I created and managed in Figma</h3>
