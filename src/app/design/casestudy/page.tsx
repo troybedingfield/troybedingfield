@@ -89,7 +89,8 @@ export default function CaseStudy() {
                     rearranged so users can see what is important to them and find info at a quick glance and conduct tasks
                     efficiently </p>
                 <div className="img-container">
-                    <img style={{ maxWidth: 1248 }} src="casestudy/csimage4.png" alt={''} />
+                    <img className='desktop-image' style={{ maxWidth: 1248 }} src="casestudy/csimage4.png" alt={''} />
+                    <img className='mobile-image' style={{ maxWidth: 1248 }} src="casestudy/csimage4-mobile2.png" alt={''} />
                 </div>
                 <div className="button-container">
 
