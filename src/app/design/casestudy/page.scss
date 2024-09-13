@@ -10,6 +10,17 @@
     background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 124, 186, 1) 55%);
 }
 
+.design-container-cs {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+    background: rgba($color: #007cba, $alpha: 1);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 124, 186, 1) 55%);
+}
+
 
 .cscopy-section {
     background-color: rgba($color: white, $alpha: 0.98);

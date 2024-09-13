@@ -11,7 +11,7 @@ export default function CaseStudy() {
 
 
     return (
-        <div className="design-container">
+        <div className="design-container-cs">
 
             <div className="case-study">
                 <div className="inner-container">
