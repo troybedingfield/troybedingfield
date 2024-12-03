@@ -27,6 +27,7 @@ export default function Header({ ...props }) {
                 </div>
                 <div className="right">
                     <a href="https://www.linkedin.com/in/troy-bedingfield-0b5850a/" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/troybedingfield/" target="_blank">GitHub</a>
 
                     <SplitButton dropdownItems={['PDF', 'DOC']} buttonClick={handleButtonClick}>Resume</SplitButton>
                 </div>
