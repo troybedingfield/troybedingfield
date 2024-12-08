@@ -51,7 +51,7 @@ export default function Home() {
       <div className="component-example">
         <p className="text-center">Component Library Button Example:</p>
         <p className="text-center">To see the full example setup and documentation <br /><br /> <a
-          href="https://troybedingfield.github.io/react-storybook/?path=/docs/app-components-button--docs" target="_blank"
+          href="https://troybedingfield.github.io/tb-ui/?path=/docs/components-button--docs" target="_blank"
           className="font24">Storybook Link</a></p>
         <br />
 
