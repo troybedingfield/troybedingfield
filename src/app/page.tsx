@@ -30,7 +30,7 @@ export default function Home() {
           industries.
         </h3>
 
-        <h4 className="text-center font-bold">Skilled in HTML, CSS, JavaScript, TypeScript, Angular, Figma</h4>
+        <h4 className="text-center font-bold">Skilled in HTML, CSS, JavaScript, TypeScript, Angular, React, Figma</h4>
 
         <h5 className="text-center font-regular">Also have experience with .NET, PHP, WordPress, Drupal</h5>
 
