@@ -23,20 +23,22 @@ export default function Home() {
     <div className="home-container">
       <div className="home-top-text">
 
-        <h3 className="text-center font-black">Experienced Front-End Developer and UX/UI Designer with a demonstrated
+        <h3 className="flex text-center font-black">Experienced Front-End Developer and UX/UI Designer with a demonstrated
           history of working in the
           marketing
-          and payroll
+          and HR/Payroll
           industries.
         </h3>
 
-        <h4 className="text-center font-bold">Skilled in HTML, CSS, JavaScript, TypeScript, Angular, React, Figma</h4>
-
-        <h5 className="text-center font-regular">Also have experience with .NET, PHP, WordPress, Drupal</h5>
-
-        <h4 className="text-center font-medium">Professional with a Bachelor&apos;s of fine art focused in Graphic Design from
+        <h4 className="flex text-center justify-center font-medium">Professional with a Bachelor&apos;s of fine art focused in Graphic Design <br /> from
           Georgia State
           University.</h4>
+
+        <h5 className="flex text-center justify-center font-bold">Skilled in HTML, CSS, JavaScript, TypeScript, Angular, React, Figma</h5>
+
+
+
+
 
 
       </div>
@@ -44,7 +46,7 @@ export default function Home() {
       <div className="saas-work">
         <div className="inner-container">
           <p className="text-center">Payroll/HR SaaS application:</p>
-          <img src="troy-homepage-montage-01.png" alt="saas-examples" />
+          <Image src="/troy-homepage-montage-01.png" alt="saas-examples" priority width="1107" height="532" sizes="((max-width: 768px) 100vw, (max-height: auto) 100vh )" style={{ objectFit: "contain" }} />
         </div>
       </div>
 
@@ -63,7 +65,7 @@ export default function Home() {
         <div className="inner-container">
           <p className="text-center">Workflow Designs and Design System Components from Figma</p>
 
-          <Carousel automatic="true" interval="5000" selHeight={800} images={['carousel-home/4.png', 'carousel-home/1.png', 'carousel-home/2.png', 'carousel-home/3.png']} />
+          <Carousel selHeight={800} images={['carousel-home/4.png', 'carousel-home/1.png', 'carousel-home/2.png', 'carousel-home/3.png']} />
 
           <p className="text-center">Click to see more designs and prototypes of a user workflow</p>
           <div className="button-container">
@@ -124,7 +126,7 @@ export default function Home() {
 
       </div>
 
-      <div className="angular-version">
+      {/* <div className="angular-version">
         <div className="angular-inner-container">
           <p className="text-center">Click to see an Angular version of this site</p>
           <div className="button-container">
@@ -132,7 +134,7 @@ export default function Home() {
             <Button buttonClick={goToReact}>Angular</Button>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="contact-form">
         <div className="form-inner-container">

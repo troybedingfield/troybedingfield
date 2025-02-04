@@ -1,3 +1,5 @@
+@use "tailwindcss";
+
 /* You can add global styles to this file, and also import other style files */
 :root {
   --color-success: green;
@@ -280,4 +282,12 @@ a {
 
 .show {
   display: flex;
+}
+
+input {
+  background-color: white;
+}
+
+textarea {
+  background-color: white;
 }

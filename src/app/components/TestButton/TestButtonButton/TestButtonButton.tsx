@@ -1,15 +1,15 @@
 'use client';
 
-import './Button.scss'
+import './TestButtonButton.scss'
 
 type ButtonProps = Readonly<{
     children?: string,
-    color?: 'default' | 'primary' | 'secondary' | 'error' | 'warning' | 'success' | 'disabled' | undefined,
-    fill?: 'solid' | 'outline' | 'clear' | undefined,
-    border?: 'true' | undefined,
+    color?: string,
+    fill?: string,
+    border?: string,
     disabled?: boolean,
-    size?: 'small' | 'medium' | 'large' | undefined,
-    uppercase?: 'true' | undefined,
+    size?: string,
+    uppercase?: boolean,
     maxWidth?: number,
     minWidth?: number,
     maxHeight?: number,
@@ -22,7 +22,7 @@ type ButtonProps = Readonly<{
     buttonClick?: React.MouseEventHandler<HTMLButtonElement>
 }>
 
-export default function Button({ children, ...props }: ButtonProps) {
+export default function TestButtonButton({ children, ...props }: ButtonProps) {
     const {
         color = 'default',
         disabled,

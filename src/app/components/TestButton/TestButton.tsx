@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Button from '../Button/Button'
 import TestCodeBlock from '../TestCodeBlock/TestCodeBlock'
 import './TestButton.scss'
+import TestButtonButton from './TestButtonButton/TestButtonButton';
 
 export default function TestButton({ ...props }) {
     const { } = props
@@ -56,7 +57,7 @@ export default function TestButton({ ...props }) {
     }
 
     if (userInput.Disabled) {
-        codeString += ` disabled="${userInput.Disabled}"`;
+        codeString += ` disabled`;
     }
 
 
@@ -141,7 +142,7 @@ export default function TestButton({ ...props }) {
                         <div>
                             <label>Test Button</label>
 
-                            <Button color={userInput.Color} fill={userInput.Fill} size={userInput.Size} uppercase={userInput.Uppercase} disabled={userInput.Disabled}>{userInput.Label}</Button>
+                            <TestButtonButton color={userInput.Color} fill={userInput.Fill} size={userInput.Size} uppercase={userInput.Uppercase} disabled={userInput.Disabled}>{userInput.Label}</TestButtonButton>
                         </div>
                         <div className="code-container">
                             <label className="margin-top25">Code</label>

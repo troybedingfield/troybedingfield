@@ -40,14 +40,15 @@ export default function Carousel({ ...props }) {
     }
 
     function onPreviousClick() {
-        const previous = currentSlide - 1;
+        let previous = currentSlide - 1;
         setCurrentSlide(previous < 0 ? images!.length - 1 : previous);
 
     }
 
     function onNextClick() {
-        const next = currentSlide + 1;
+        let next = currentSlide + 1;
         setCurrentSlide(next === images!.length ? 0 : next);
+
 
     }
 
