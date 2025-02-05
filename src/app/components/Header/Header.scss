@@ -34,6 +34,10 @@
         display: none;
     }
 
+    .mobile-left-menu {
+        display: none;
+    }
+
 
     .header-name {
         font-size: 38px;
@@ -62,6 +66,10 @@
         }
 
         .mobile-right-menu {
+            display: flex;
+        }
+
+        .mobile-left-menu {
             display: flex;
         }
 
