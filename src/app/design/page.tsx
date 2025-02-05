@@ -47,7 +47,7 @@ export default function Design() {
             <div className="design-system-container">
                 <h3 className="text-center">Mobile App Case Study</h3>
                 <div className="img-container">
-                    <img style={{ maxWidth: 1024 }} src="casestudy/csimage1.png" alt={''} />
+                    <img style={{ maxWidth: 1024, width: '100%' }} src="casestudy/csimage1.png" alt={''} />
                 </div>
                 <div className="button-container">
                     <Button color="secondary" buttonClick={() => router.push('/design/casestudy')}>View Case Study</Button>

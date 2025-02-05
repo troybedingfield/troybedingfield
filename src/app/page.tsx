@@ -8,6 +8,7 @@ import { useRouter } from "next/navigation";
 import Contact from "./components/Contact/Contact";
 import Toast from "./components/Toast/Toast";
 import TestButton from "./components/TestButton/TestButton";
+import { motion, MotionConfig } from "motion/react";
 
 export default function Home() {
   const router = useRouter()
@@ -21,22 +22,29 @@ export default function Home() {
 
 
     <div className="home-container">
-      <div className="home-top-text">
+      <div
+        className="home-top-text">
+        <MotionConfig transition={{ duration: 0.2, ease: "easeInOut" }}>
+          <motion.h3 initial={{ opacity: 0 }}
+            animate={{ y: 20, opacity: 1 }}
+            transition={{ type: "spring", stiffness: 50, }} className="flex text-center font-black">Experienced Front-End Developer and UX/UI Designer with a demonstrated
+            history of working in the
+            marketing
+            and HR/Payroll
+            industries.
+          </motion.h3>
 
-        <h3 className="flex text-center font-black">Experienced Front-End Developer and UX/UI Designer with a demonstrated
-          history of working in the
-          marketing
-          and HR/Payroll
-          industries.
-        </h3>
+          <motion.h4 initial={{ opacity: 0 }}
+            animate={{ y: 20, opacity: 1 }}
+            transition={{ type: "spring", stiffness: 50, delay: 0.5, }} className="flex text-center justify-center font-medium">Professional with a Bachelor&apos;s of fine art focused in Graphic Design <br /> from
+            Georgia State
+            University.</motion.h4>
 
-        <h4 className="flex text-center justify-center font-medium">Professional with a Bachelor&apos;s of fine art focused in Graphic Design <br /> from
-          Georgia State
-          University.</h4>
+          <motion.h5 initial={{ opacity: 0 }}
+            animate={{ y: 20, opacity: 1 }}
+            transition={{ type: "spring", stiffness: 50, delay: 1, }} className="flex text-center justify-center font-bold">Skilled in HTML, CSS, JavaScript, TypeScript, Angular, React, Figma</motion.h5>
 
-        <h5 className="flex text-center justify-center font-bold">Skilled in HTML, CSS, JavaScript, TypeScript, Angular, React, Figma</h5>
-
-
+        </MotionConfig>
 
 
 
@@ -46,7 +54,12 @@ export default function Home() {
       <div className="saas-work">
         <div className="inner-container">
           <p className="text-center">Payroll/HR SaaS application:</p>
-          <Image src="/troy-homepage-montage-01.png" alt="saas-examples" priority width="1107" height="532" sizes="((max-width: 768px) 100vw, (max-height: auto) 100vh )" style={{ objectFit: "contain" }} />
+          <motion.div initial={{ opacity: 0 }}
+            animate={{ y: 20, opacity: 1 }}
+            transition={{ type: "spring", stiffness: 50, duration: 0.2, ease: "easeInOut" }}>
+
+            <Image src="/troy-homepage-montage-01.png" alt="saas-examples" priority width="1107" height="532" sizes="((max-width: 768px) 100vw, (max-height: auto) 100vh )" style={{ objectFit: "contain" }} />
+          </motion.div>
         </div>
       </div>
 

@@ -18,7 +18,7 @@ export default function TestButton({ ...props }) {
 
     let codeString;
 
-    console.log(userInput);
+    // console.log(userInput);
 
     function handleChange(e: any, inputIdentifier: string, newValue: any) {
 
@@ -26,7 +26,7 @@ export default function TestButton({ ...props }) {
             newValue = e.target.value = e.target.checked;
         }
 
-        console.log(inputIdentifier, newValue)
+        // console.log(inputIdentifier, newValue)
 
         setUserInput((prevUserInput) => {
             return {

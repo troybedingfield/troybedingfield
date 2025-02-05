@@ -8,7 +8,7 @@ export default function Toast({ ...props }) {
     const toast = useRef<any | undefined>()
 
     function dismiss(ref: any) {
-        console.log(ref);
+        // console.log(ref);
         ref.current.classList.remove('open');
         ref.current.classList.add('close');
     }

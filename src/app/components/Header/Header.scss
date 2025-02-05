@@ -22,6 +22,19 @@
         }
     }
 
+    .desktop-right-menu {
+        display: flex;
+    }
+
+    .desktop-left-menu {
+        display: flex;
+    }
+
+    .mobile-right-menu {
+        display: none;
+    }
+
+
     .header-name {
         font-size: 38px;
         font-weight: var(--roboto-bold);
@@ -29,7 +42,7 @@
         cursor: pointer;
     }
 
-    @media screen and (max-width:559px) and (min-width: 476px) {
+    @media only screen and (max-width:768px) {
         .header-name {
             font-size: 20px;
         }
@@ -39,6 +52,19 @@
         .header-name {
             font-size: 16px;
         }
+
+        .desktop-right-menu {
+            display: none;
+        }
+
+        .desktop-left-menu {
+            display: none;
+        }
+
+        .mobile-right-menu {
+            display: flex;
+        }
+
     }
 
 
