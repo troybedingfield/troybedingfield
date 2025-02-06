@@ -21,11 +21,13 @@ export default function MobileMenu({ ...props }) {
 
     const dropdown = useRef<any | undefined>();
 
-    // useOutsideClick(dropdown);
+    useOutsideClick(dropdown);
 
     function handleMenuIconClick() {
         setIsOpen(isOpen => !isOpen);
-        console.log(isOpen)
+        if (dropdown.current) {
+            setIsOpen(false);
+        }
     }
 
     function handleDropdownClick(item: any) {
@@ -38,26 +40,26 @@ export default function MobileMenu({ ...props }) {
     /**
  * Hook that alerts clicks outside of the passed ref
  */
-    // function useOutsideClick(ref: any) {
+    function useOutsideClick(ref: any) {
 
-    //     useEffect(() => {
-    //         function handleClickOutside(event: any) {
-    //             if (ref.current && !ref.current.contains(event.target)) {
-    //                 handleMenuIconClick();
-    //             }
-    //         }
+        useEffect(() => {
+            function handleClickOutside(event: any) {
+                if (ref.current && !ref.current.contains(event.target)) {
+                    handleMenuIconClick();
+                }
+            }
 
-    //         if (ref) {
-    //             // Bind the event listener
-    //             document.addEventListener("mousedown", handleClickOutside);
-    //             return () => {
-    //                 // Unbind the event listener on clean up
-    //                 document.removeEventListener("mouseup", handleClickOutside);
-    //             };
-    //         }
-    //     }, [ref])
+            if (ref) {
+                // Bind the event listener
+                document.addEventListener("mousedown", handleClickOutside);
+                return () => {
+                    // Unbind the event listener on clean up
+                    document.removeEventListener("mouseup", handleClickOutside);
+                };
+            }
+        }, [ref])
 
-    // }
+    }
 
     return (
 

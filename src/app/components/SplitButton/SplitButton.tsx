@@ -25,6 +25,9 @@ export default function SplitButton({ ...props }) {
 
     function splitOpen() {
         setIsOpen(isOpen => !isOpen);
+        if (dropdown.current) {
+            setIsOpen(false);
+        }
 
     }
 
@@ -66,7 +69,7 @@ export default function SplitButton({ ...props }) {
             </button>
             <div className="dropdown">
                 <button onClick={splitOpen}>
-                    <span className="down-arrow"></span>
+                    <span className={isOpen ? "up-arrow" : "down-arrow"}></span>
                 </button>
                 <AnimatePresence>
                     {!isOpen ? null : (<motion.div key="modal"
@@ -78,7 +81,10 @@ export default function SplitButton({ ...props }) {
                     </a> */}
 
                         {dropdownItems.map((item: any, index: number) => {
-                            return (<a key={index} onClick={() => handleDropdownClick(item)}>{item}</a>)
+                            return (<motion.a initial={{ opacity: 0 }}
+                                animate={{ opacity: 1, }}
+                                transition={{ delay: 0.1 }}
+                                exit={{ opacity: 0 }} key={index} onClick={() => handleDropdownClick(item)}>{item}</motion.a>)
                         })}
 
 
