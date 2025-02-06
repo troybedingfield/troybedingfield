@@ -10,6 +10,12 @@ import MobileMenu from '../MobileMenu/MobileMenu';
 export default function Header({ ...props }) {
     const router = useRouter()
     const pathname = usePathname()
+
+
+    // useEffect(() => {
+    //     const hash = window.location.hash;
+    //     console.log(hash)
+    // })
     const {
 
     } = props

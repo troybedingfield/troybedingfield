@@ -4,6 +4,9 @@ const nextConfig = {
     reactStrictMode: true,
     // basePath: '/react-troybedingfield',
     // assetPrefix: "/react-troybedingfield/",
+
+
+
 };
 
 export default nextConfig;

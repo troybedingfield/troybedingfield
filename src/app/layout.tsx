@@ -23,6 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script async type='text/javascript' src='/hash-router-redirect.js'></script>
+      </head>
       <body className={inter.className}>
         <div id="modal"></div>
         <Header />
