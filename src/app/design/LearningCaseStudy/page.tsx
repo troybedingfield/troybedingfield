@@ -23,7 +23,7 @@ export default function CaseStudy() {
             <div className="design-system-container">
 
                 <div className="img-container">
-                    <img style={{ maxWidth: 1024 }} src="/carousel-home/1.png" alt={''} />
+                    <img style={{ maxWidth: 1024 }} src="/carousel-home/3.png" alt={''} />
                 </div>
                 <div className="button-container">
 
@@ -35,14 +35,12 @@ export default function CaseStudy() {
             <div className="cscopy-section">
                 <div className="inner-container text-center">
                     <h3>The Challenge?</h3>
-                    <p>The company leadership approached our team and asked us to rethink and overhaul our mobile app based on
-                        app store download and usage analytics to drive new downloads, improve engagment, and make it easier to
-                        use. </p>
+                    <p className='mb-12'>Our contract was ending with the 3rd party learning management system so we had 6 months to create our own product that could be viable and provide the basic needs of a learning management system.</p>
                 </div>
                 <div className="inner-container ">
                     <div className="col-container">
                         <div className="col">
-                            <h5>Main Menu and Page Organization</h5>
+                            <h5>User Journeys, Flows, and Views</h5>
                             <p>Our mobile app was originally built to match the minimally responsive web pages with all of the
                                 pages and products listed in the menu causing a very long and overwhelming experience for users
                                 to find what they need and make sense of where they need to go to access desired workflows. </p>
@@ -54,10 +52,14 @@ export default function CaseStudy() {
                                 and design for a true mobile app experience.</p>
                         </div>
                         <div className="col center">
-                            <img src="/LearningCaseStudy/csimage2.png" style={{ marginTop: 24, maxWidth: 300 }}
+                            <img src="/design-section-3/journey.png"
                                 alt={''} />
                         </div>
                     </div>
+                </div>
+                <div className='relative flex flex-col m-12 gap-6'>
+                    <img src='/LearningCaseStudy/flow4.png' />
+                    <img src='/LearningCaseStudy/views.png' />
                 </div>
             </div>
 
@@ -67,11 +69,11 @@ export default function CaseStudy() {
                 <div className="inner-container ">
                     <div className="col-container">
                         <div className="col center">
-                            <img src="/LearningCaseStudy/csimage3.png" style={{ marginTop: 24, maxWidth: 575 }}
+                            <img src="/LearningCaseStudy/learning1.png" style={{ marginTop: 24, maxWidth: 575 }}
                                 alt={''} />
                         </div>
                         <div className="col">
-                            <h5 className="white">New Main Menu and Submenu</h5>
+                            <h5 className="white">Desktop, Responsive, and Our Mobile App</h5>
                             <p className="white">Based on our research and industry standards we moved the main menu to the bottom,
                                 made it persistent, and identified 5 section categories our products and pages fit into.</p>
                             <p className="white">We created a submenu based on our pill button from the web app that would allow us
@@ -102,7 +104,7 @@ export default function CaseStudy() {
 
             <div className="cscopy-section">
                 <div className="inner-container text-center">
-                    <h3>The Prototype</h3>
+                    <h3>Development</h3>
                     <p>We created a high fidelity prototype to share with the internal stakeholders and from the positive
                         response and feedback the company stakeholder asked the mobile development to create a functional
                         prototype to beta test with companies and for a conference</p>
@@ -122,7 +124,7 @@ export default function CaseStudy() {
 
             <div className="design-system-container">
                 <h3>The Result</h3>
-                <p>The internal stakeholders and product managers have been pleased with the updates and are beta testing with
+                <p className='mb-24'>The internal stakeholders and product managers have been pleased with the updates and are beta testing with
                     compaines and gathering data and relaying feedback as needed to both the UX and Development so we can
                     quickly turn around updates for further testing. The ease of use and paring down of pages and sections has
                     been a welcome change and the feedback has been this actually feels like a useful mobile application and not
