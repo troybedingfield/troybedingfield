@@ -23,7 +23,7 @@ export default function CaseStudy() {
             <div className="design-system-container">
 
                 <div className="img-container">
-                    <img style={{ maxWidth: 1024 }} src="casestudy/csimage1.png" alt={''} />
+                    <img style={{ maxWidth: 1024 }} src="/MobileCaseStudy/csimage1.png" alt={''} />
                 </div>
                 <div className="button-container">
 
@@ -54,7 +54,7 @@ export default function CaseStudy() {
                                 and design for a true mobile app experience.</p>
                         </div>
                         <div className="col center">
-                            <img src="casestudy/csimage2.png" style={{ marginTop: 24, maxWidth: 300 }}
+                            <img src="/MobileCaseStudy/csimage2.png" style={{ marginTop: 24, maxWidth: 300 }}
                                 alt={''} />
                         </div>
                     </div>
@@ -67,7 +67,7 @@ export default function CaseStudy() {
                 <div className="inner-container ">
                     <div className="col-container">
                         <div className="col center">
-                            <img src="casestudy/csimage3.png" style={{ marginTop: 24, maxWidth: 575 }}
+                            <img src="/MobileCaseStudy/csimage3.png" style={{ marginTop: 24, maxWidth: 575 }}
                                 alt={''} />
                         </div>
                         <div className="col">
@@ -89,8 +89,8 @@ export default function CaseStudy() {
                     rearranged so users can see what is important to them and find info at a quick glance and conduct tasks
                     efficiently </p>
                 <div className="img-container">
-                    <img className='desktop-image' style={{ maxWidth: 1248 }} src="casestudy/csimage4.png" alt={''} />
-                    <img className='mobile-image' style={{ maxWidth: 1248 }} src="casestudy/csimage4-mobile2.png" alt={''} />
+                    <img className='desktop-image' style={{ maxWidth: 1248 }} src="/MobileCaseStudy/csimage4.png" alt={''} />
+                    <img className='mobile-image' style={{ maxWidth: 1248 }} src="/MobileCaseStudy/csimage4-mobile2.png" alt={''} />
                 </div>
                 <div className="button-container">
 
@@ -113,16 +113,16 @@ export default function CaseStudy() {
                     </div>
                     <div className="button-container">
                         <Button buttonClick={designSystemLink}>Figma Link</Button>
-                        {/* <tb-button (click)="caseStudyLink()">Figma Link</tb-button> */}
+                        {/* <tb-button (click)="MobileCaseStudyLink()">Figma Link</tb-button> */}
                     </div>
                 </div>
 
             </div>
 
 
-            <div className="design-system-container">
+            <div className="design-system-container ">
                 <h3>The Result</h3>
-                <p>The internal stakeholders and product managers have been pleased with the updates and are beta testing with
+                <p className='mb-24'>The internal stakeholders and product managers have been pleased with the updates and are beta testing with
                     compaines and gathering data and relaying feedback as needed to both the UX and Development so we can
                     quickly turn around updates for further testing. The ease of use and paring down of pages and sections has
                     been a welcome change and the feedback has been this actually feels like a useful mobile application and not

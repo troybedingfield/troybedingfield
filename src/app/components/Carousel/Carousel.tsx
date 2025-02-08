@@ -8,6 +8,7 @@ export default function Carousel({ ...props }) {
         captions,
         selHeight,
         automatic,
+        arrowColor = "black",
         interval } = props
 
 
@@ -78,8 +79,8 @@ export default function Carousel({ ...props }) {
                 })}
 
 
-                <a className="prev" onClick={onPreviousClick}>&#10094;</a>
-                <a className="next" onClick={onNextClick}>&#10095;</a>
+                <a className="prev" style={{ color: arrowColor }} onClick={onPreviousClick}>&#10094;</a>
+                <a className="next" style={{ color: arrowColor }} onClick={onNextClick}>&#10095;</a>
             </div>
 
 

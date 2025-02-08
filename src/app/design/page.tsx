@@ -6,6 +6,7 @@ import Carousel from '../components/Carousel/Carousel';
 import Toast from '../components/Toast/Toast';
 import Image from 'next/image'
 import { useRouter } from 'next/navigation';
+import { motion, MotionConfig } from 'motion/react';
 
 export default function Design() {
     const router = useRouter()
@@ -43,17 +44,37 @@ export default function Design() {
 
     return (
         <div className="design-container">
+            <MotionConfig transition={{ duration: 0.2, ease: "easeInOut" }}>
+                <div className="design-system-container">
+                    <motion.h3 initial={{ y: -20, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ type: "spring", stiffness: 50, }} className="text-center">Mobile App Case Study</motion.h3>
+                    <div className="img-container mb-6">
+                        <motion.img initial={{ y: -20, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{ type: "spring", stiffness: 50, }} style={{ maxWidth: 1024, width: '100%' }} src="/MobileCaseStudy/csimage1.png" alt={''} />
+                    </div>
+                    <div className="button-container">
+                        <Button color="secondary" buttonClick={() => router.push('/design/MobileCaseStudy')}>View Case Study</Button>
 
-            <div className="design-system-container">
-                <h3 className="text-center">Mobile App Case Study</h3>
-                <div className="img-container">
-                    <img style={{ maxWidth: 1024, width: '100%' }} src="casestudy/csimage1.png" alt={''} />
+                    </div>
                 </div>
-                <div className="button-container">
-                    <Button color="secondary" buttonClick={() => router.push('/design/casestudy')}>View Case Study</Button>
-
+                <div className="figma-work">
+                    <div className='inner-container'>
+                        <motion.h3 initial={{ y: -20, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{ type: "spring", stiffness: 50, }} className="text-center">Learning Management Case Study</motion.h3>
+                        <div className="img-container mb-6">
+                            <motion.img initial={{ y: -20, opacity: 0 }}
+                                animate={{ y: 0, opacity: 1 }}
+                                transition={{ type: "spring", stiffness: 50, }} style={{ maxWidth: 1024, width: '100%' }} src="/carousel-home/3.png" alt={''} />
+                        </div>
+                        <div className="button-container">
+                            <Button color="secondary" buttonClick={() => router.push('/design/LearningCaseStudy')}>View Case Study</Button>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </MotionConfig>
 
             <div className="design-system-container">
                 <h3 className="text-center">Design system I created and managed in Figma</h3>
@@ -127,7 +148,7 @@ export default function Design() {
             <div className="journeyAndFlows top-section">
                 <h3 className="text-center">Figma user journey and user flows</h3>
                 <div className="inner-carousel-container top-section">
-                    <Carousel selHeight={500} images={['design-section-3/journey.png', 'design-section-3/group1.png', 'design-section-3/group2.png', 'design-section-3/group3.png']} />
+                    <Carousel arrowColor='white' selHeight={500} images={['design-section-3/journey.png', 'design-section-3/group1.png', 'design-section-3/group2.png', 'design-section-3/group3.png']} />
                 </div>
 
             </div>
