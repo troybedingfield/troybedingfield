@@ -106,11 +106,11 @@ export default function CaseStudy() {
                     <p>We created a high fidelity prototype to share with the internal stakeholders and from the positive
                         response and feedback the company stakeholder asked the mobile development to create a functional
                         prototype to beta test with companies and for a conference</p>
-                    <div id="figma-mobile-container">
+                    {/* <div id="figma-mobile-container">
                         <iframe className="responsive-iframe"
                             src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fb22FxF5JXuYgVxqpmv7tKK%2FMobile-App%3Fnode-id%3D13-1788%26node-type%3DFRAME%26t%3D5zthbLM8N1JDgfxh-1%26scaling%3Dscale-down%26content-scaling%3Dfixed%26page-id%3D0%253A1%26starting-point-node-id%3D13%253A1788%26hide-ui%3D1"
                             allowFullScreen></iframe>
-                    </div>
+                    </div> */}
                     <div className="button-container">
                         <Button buttonClick={designSystemLink}>Figma Link</Button>
                         {/* <tb-button (click)="caseStudyLink()">Figma Link</tb-button> */}
