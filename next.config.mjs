@@ -4,7 +4,9 @@ const nextConfig = {
     reactStrictMode: true,
     // basePath: '/react-troybedingfield',
     // assetPrefix: "/react-troybedingfield/",
-
+    images: {
+        unoptimized: true,
+    },
 
 
 };
