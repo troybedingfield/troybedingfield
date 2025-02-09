@@ -23,7 +23,7 @@ export default function CaseStudy() {
             <div className="design-system-container">
 
                 <div className="img-container">
-                    <img style={{ maxWidth: 1024 }} src="casestudy/csimage1.png" alt={''} />
+                    <img style={{ maxWidth: 1024 }} src="/MobileCaseStudy/csimage1.png" alt={''} />
                 </div>
                 <div className="button-container">
 
@@ -34,7 +34,7 @@ export default function CaseStudy() {
 
             <div className="cscopy-section">
                 <div className="inner-container text-center">
-                    <h3>The Challenge?</h3>
+                    <h3 className='font-bold'>The Challenge?</h3>
                     <p>The company leadership approached our team and asked us to rethink and overhaul our mobile app based on
                         app store download and usage analytics to drive new downloads, improve engagment, and make it easier to
                         use. </p>
@@ -54,7 +54,7 @@ export default function CaseStudy() {
                                 and design for a true mobile app experience.</p>
                         </div>
                         <div className="col center">
-                            <img src="casestudy/csimage2.png" style={{ marginTop: 24, maxWidth: 300 }}
+                            <img src="/MobileCaseStudy/csimage2.png" style={{ marginTop: 24, maxWidth: 300 }}
                                 alt={''} />
                         </div>
                     </div>
@@ -67,11 +67,11 @@ export default function CaseStudy() {
                 <div className="inner-container ">
                     <div className="col-container">
                         <div className="col center">
-                            <img src="casestudy/csimage3.png" style={{ marginTop: 24, maxWidth: 575 }}
+                            <img src="/MobileCaseStudy/csimage3.png" style={{ marginTop: 24, maxWidth: 575 }}
                                 alt={''} />
                         </div>
                         <div className="col">
-                            <h5 className="white">New Main Menu and Submenu</h5>
+                            <h5 className="white font-bold">New Main Menu and Submenu</h5>
                             <p className="white">Based on our research and industry standards we moved the main menu to the bottom,
                                 made it persistent, and identified 5 section categories our products and pages fit into.</p>
                             <p className="white">We created a submenu based on our pill button from the web app that would allow us
@@ -89,8 +89,8 @@ export default function CaseStudy() {
                     rearranged so users can see what is important to them and find info at a quick glance and conduct tasks
                     efficiently </p>
                 <div className="img-container">
-                    <img className='desktop-image' style={{ maxWidth: 1248 }} src="casestudy/csimage4.png" alt={''} />
-                    <img className='mobile-image' style={{ maxWidth: 1248 }} src="casestudy/csimage4-mobile2.png" alt={''} />
+                    <img className='desktop-image' style={{ maxWidth: 1248 }} src="/MobileCaseStudy/csimage4.png" alt={''} />
+                    <img className='mobile-image' style={{ maxWidth: 1248 }} src="/MobileCaseStudy/csimage4-mobile2.png" alt={''} />
                 </div>
                 <div className="button-container">
 
@@ -102,7 +102,7 @@ export default function CaseStudy() {
 
             <div className="cscopy-section">
                 <div className="inner-container text-center">
-                    <h3>The Prototype</h3>
+                    <h3 className='font-bold'>The Prototype</h3>
                     <p>We created a high fidelity prototype to share with the internal stakeholders and from the positive
                         response and feedback the company stakeholder asked the mobile development to create a functional
                         prototype to beta test with companies and for a conference</p>
@@ -113,16 +113,16 @@ export default function CaseStudy() {
                     </div>
                     <div className="button-container">
                         <Button buttonClick={designSystemLink}>Figma Link</Button>
-                        {/* <tb-button (click)="caseStudyLink()">Figma Link</tb-button> */}
+                        {/* <tb-button (click)="MobileCaseStudyLink()">Figma Link</tb-button> */}
                     </div>
                 </div>
 
             </div>
 
 
-            <div className="design-system-container">
+            <div className="design-system-container ">
                 <h3>The Result</h3>
-                <p>The internal stakeholders and product managers have been pleased with the updates and are beta testing with
+                <p className='mb-24'>The internal stakeholders and product managers have been pleased with the updates and are beta testing with
                     compaines and gathering data and relaying feedback as needed to both the UX and Development so we can
                     quickly turn around updates for further testing. The ease of use and paring down of pages and sections has
                     been a welcome change and the feedback has been this actually feels like a useful mobile application and not

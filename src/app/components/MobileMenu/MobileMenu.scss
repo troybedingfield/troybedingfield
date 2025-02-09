@@ -325,6 +325,9 @@
         left: 0px;
         top: 100%;
         filter: drop-shadow(1px 2px 3px #5f5f5f);
+        width: auto;
+        display: flex;
+        flex-direction: column;
 
         &.close {
             display: none;
@@ -341,6 +344,13 @@
         padding: 12px 16px;
         text-decoration: none;
         display: block;
+        width: auto;
+        display: flex;
+        text-wrap: nowrap;
+
+        &.subItem {
+            padding: 12px 16px 12px 32px;
+        }
     }
 
     .down-arrow {

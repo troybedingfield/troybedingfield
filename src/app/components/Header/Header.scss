@@ -54,6 +54,16 @@
         }
     }
 
+    @media only screen and (max-width:1000px) {
+        .desktop-left-menu {
+            display: none;
+        }
+
+        .mobile-left-menu {
+            display: flex;
+        }
+    }
+
     @media only screen and (max-width:475px) {
         .header-name {
             font-size: 16px;
@@ -63,12 +73,14 @@
             display: none;
         }
 
-        .desktop-left-menu {
-            display: none;
-        }
+
 
         .mobile-right-menu {
             display: flex;
+        }
+
+        .desktop-left-menu {
+            display: none;
         }
 
         .mobile-left-menu {
