@@ -41,8 +41,8 @@ export default function CaseStudy() {
                     <div className="col-container">
                         <div className="col">
                             <h5 className='font-bold'>User Journeys, Flows, and Views</h5>
-                            <p className='p-2'>After conduction our competitive analysis and determining our business requirements for our inital launch we created Journeys and flows for our established user personas and focued on our admin/managers being able view already assigned and assign new employees to training.</p>
-                            <p className='p-2'>From our multiple personas we created views and refined required data that needed to be accessed per role and proposed some updates to our filtering and actionbar components that could work across our personas.</p>
+                            <p className='p-2'>After conducting our competitive analysis and determining our business requirements for our initial launch we created Journeys and flows for our established user personas and focused on our admin/managers being able to view already assigned and assign new employees to training.</p>
+                            <p className='p-2'>From our multiple personas we created views and refined required data that needed to be accessed per role and proposed some updates to our filtering and action bar components that could work across our personas.</p>
                             <p className='p-2'>We also created some new patterns and components for employees to view their assigned training and see a thumbnail, course description, and progress/status on due date.</p>
                         </div>
                         <div className="col center">
@@ -93,7 +93,7 @@ export default function CaseStudy() {
             <div className="cscopy-section">
                 <div className="inner-container text-center">
                     <h3>Development</h3>
-                    <p>Since we had such a tight deadline and turn around we worked directly with the development team to hand off pages per flow and provide quick feedback and updated designs. We made sure we convereted our colors to variables and worked out the best system for that particular Dev so there wasn&apos;t any roadblocks. </p>
+                    <p>Since we had such a tight deadline and turn around we worked directly with the development team to hand off pages per flow and provide quick feedback and updated designs. We made sure we converted our colors to variables and worked out the best system for that particular developer so there wasn't any roadblocks.</p>
 
                     <div className="button-container">
                         <Button buttonClick={designSystemLink}>Figma Link</Button>
@@ -106,7 +106,7 @@ export default function CaseStudy() {
 
             <div className="design-system-container">
                 <h3>The Result</h3>
-                <p className='mb-24'>Development set up a Beta testing environment for both internal sales teams and identified clients. We recieved positive feedback on the experience and also feedback to improve the initial product while also getting feedback on future product needs to expand into a robust product for our many different company sizes and types.</p>
+                <p className='mb-24'>Development set up a Beta testing environment for both internal sales teams and identified clients. We received positive feedback on the experience and also feedback to improve the initial product while also getting feedback on future product needs to expand into a robust product for our many different company sizes and types. </p>
 
             </div>
 
