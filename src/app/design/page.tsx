@@ -79,7 +79,7 @@ export default function Design() {
             <div className="design-system-container">
                 <h3 className="text-center">Design system I created and managed in Figma</h3>
                 <div className="inner-carousel-container">
-                    <Carousel selHeight={500} images={['design-section-1/2.png', 'design-section-1/4.png', 'design-section-1/3.png']} />
+                    <Carousel selHeight={500} images={['/design-section-1/2.png', '/design-section-1/4.png', '/design-section-1/3.png']} />
                 </div>
             </div>
 
@@ -98,7 +98,7 @@ export default function Design() {
             <div className="design-top-section">
                 <h3 className="text-center">Figma design screens of a user workflow</h3>
                 <div className="inner-carousel-container top-section">
-                    <Carousel selHeight={500} images={['design-section-2/1.png', 'design-section-2/2.png', 'design-section-2/3.png', 'design-section-2/4.png', 'design-section-2/5.png', 'design-section-2/6.png', 'design-section-2/7.png', 'design-section-2/8.png']} />
+                    <Carousel selHeight={500} images={['/design-section-2/1.png', '/design-section-2/2.png', '/design-section-2/3.png', '/design-section-2/4.png', '/design-section-2/5.png', '/design-section-2/6.png', '/design-section-2/7.png', '/design-section-2/8.png']} />
                 </div>
 
                 <div className="user-flow-container">
