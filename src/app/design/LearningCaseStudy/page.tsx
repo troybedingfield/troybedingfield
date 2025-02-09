@@ -6,7 +6,7 @@ export default function CaseStudy() {
 
 
     function designSystemLink() {
-        window.open('https://www.figma.com/design/b22FxF5JXuYgVxqpmv7tKK/Mobile-App?node-id=0-1&t=d45fVoAEGKEd2dgW-1')
+        window.open('https://www.figma.com/design/JhyHuflMdoV9qNb7tXCyeU/User-Flow?node-id=193-27021&p=f&t=6FFOMm1s5oI2K6Z5-0')
     }
 
 
@@ -40,16 +40,10 @@ export default function CaseStudy() {
                 <div className="inner-container ">
                     <div className="col-container">
                         <div className="col">
-                            <h5>User Journeys, Flows, and Views</h5>
-                            <p>Our mobile app was originally built to match the minimally responsive web pages with all of the
-                                pages and products listed in the menu causing a very long and overwhelming experience for users
-                                to find what they need and make sense of where they need to go to access desired workflows. </p>
-                            <p>We started by looking at analytics and user feedback on the most commonly used pages and
-                                functions and put pages into content type buckets so we coul rethink the menu and product pieces
-                                that the users cared about.</p>
-                            <p>This also lead to us taking the mobile app and looking at keeping consistentcy with out brand
-                                and web app so that it doesn&apos;t feel like a different product but also update the functionality
-                                and design for a true mobile app experience.</p>
+                            <h5 className='font-bold'>User Journeys, Flows, and Views</h5>
+                            <p className='p-2'>After conduction our competitive analysis and determining our business requirements for our inital launch we created Journeys and flows for our established user personas and focued on our admin/managers being able view already assigned and assign new employees to training.</p>
+                            <p className='p-2'>From our multiple personas we created views and refined required data that needed to be accessed per role and proposed some updates to our filtering and actionbar components that could work across our personas.</p>
+                            <p className='p-2'>We also created some new patterns and components for employees to view their assigned training and see a thumbnail, course description, and progress/status on due date.</p>
                         </div>
                         <div className="col center">
                             <img src="/design-section-3/journey.png"
@@ -74,11 +68,8 @@ export default function CaseStudy() {
                         </div>
                         <div className="col">
                             <h5 className="white">Desktop, Responsive, and Our Mobile App</h5>
-                            <p className="white">Based on our research and industry standards we moved the main menu to the bottom,
-                                made it persistent, and identified 5 section categories our products and pages fit into.</p>
-                            <p className="white">We created a submenu based on our pill button from the web app that would allow us
-                                to filter our pages within each section and tabs within the page content to break content into
-                                smaller sections to minimize vertical swiping.</p>
+                            <p className="white p-2">Desktop is usually the priority but this time they wanted to iFrame these pages into our mobile app so we made sure to make every design responsive and outlined the new pattern updates for our action bar menu dropdown.</p>
+                            <p className="white p-2">We also had to work out some issues with multiple side navs for the Admin/Managment users and prototyped small sections for the devs to understand user needs.</p>
 
                         </div>
 
@@ -87,12 +78,9 @@ export default function CaseStudy() {
             </div>
 
             <div className="design-system-container">
-                <p className="text-center white">We also consolidated pages into dashboard widgets that are swipable and can be
-                    rearranged so users can see what is important to them and find info at a quick glance and conduct tasks
-                    efficiently </p>
+                <p className="text-center white">Since time was a factor we utilized horizontal scrolling for our page layout stepped workflow section that worked on Mobile but was a compromise due to time constraints.</p>
                 <div className="img-container">
-                    <img className='desktop-image' style={{ maxWidth: 1248 }} src="/LearningCaseStudy/csimage4.png" alt={''} />
-                    <img className='mobile-image' style={{ maxWidth: 1248 }} src="/LearningCaseStudy/csimage4-mobile2.png" alt={''} />
+                    <img className='desktop-image' style={{ maxWidth: 1248 }} src="/LearningCaseStudy/desktop-mobile-builder.png" alt={''} />
                 </div>
                 <div className="button-container">
 
@@ -105,17 +93,11 @@ export default function CaseStudy() {
             <div className="cscopy-section">
                 <div className="inner-container text-center">
                     <h3>Development</h3>
-                    <p>We created a high fidelity prototype to share with the internal stakeholders and from the positive
-                        response and feedback the company stakeholder asked the mobile development to create a functional
-                        prototype to beta test with companies and for a conference</p>
-                    {/* <div id="figma-mobile-container">
-                        <iframe className="responsive-iframe"
-                            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fb22FxF5JXuYgVxqpmv7tKK%2FMobile-App%3Fnode-id%3D13-1788%26node-type%3DFRAME%26t%3D5zthbLM8N1JDgfxh-1%26scaling%3Dscale-down%26content-scaling%3Dfixed%26page-id%3D0%253A1%26starting-point-node-id%3D13%253A1788%26hide-ui%3D1"
-                            allowFullScreen></iframe>
-                    </div> */}
+                    <p>Since we had such a tight deadline and turn around we worked directly with the development team to hand off pages per flow and provide quick feedback and updated designs. We made sure we convereted our colors to variables and worked out the best system for that particular Dev so there wasn't any roadblocks. </p>
+
                     <div className="button-container">
                         <Button buttonClick={designSystemLink}>Figma Link</Button>
-                        {/* <tb-button (click)="caseStudyLink()">Figma Link</tb-button> */}
+
                     </div>
                 </div>
 
@@ -124,11 +106,7 @@ export default function CaseStudy() {
 
             <div className="design-system-container">
                 <h3>The Result</h3>
-                <p className='mb-24'>The internal stakeholders and product managers have been pleased with the updates and are beta testing with
-                    compaines and gathering data and relaying feedback as needed to both the UX and Development so we can
-                    quickly turn around updates for further testing. The ease of use and paring down of pages and sections has
-                    been a welcome change and the feedback has been this actually feels like a useful mobile application and not
-                    a poor clone of the responsive mobile web app</p>
+                <p className='mb-24'>Development set up a Beta testing environment for both internal sales teams and identified clients. We recieved positive feedback on the experience and also feedback to improve the initial product while also getting feedback on future product needs to expand into a robust product for our many different company sizes and types.</p>
 
             </div>
 

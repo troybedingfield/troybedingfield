@@ -95,10 +95,21 @@ export default function MobileMenu({ ...props }) {
                     </a> */}
 
                         {menuItems.map((item: any, index: number) => {
-                            return (<motion.a initial={{ opacity: 0 }}
-                                animate={{ opacity: 1, }}
-                                transition={{ delay: 0.1 }}
-                                exit={{ opacity: 0 }} key={index} onClick={() => handleDropdownClick(item)}>{item}</motion.a>)
+                            if (Array.isArray(item)) {
+
+                                return (item.map((subItem: any, subIndex: number) => {
+                                    return (<motion.a initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1, }}
+                                        transition={{ delay: 0.1 }}
+                                        exit={{ opacity: 0 }} className='subItem' key={subIndex} onClick={() => handleDropdownClick(subItem)}>{subItem}</motion.a>)
+                                }))
+                            } else {
+                                return (<motion.a initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1, }}
+                                    transition={{ delay: 0.1 }}
+                                    exit={{ opacity: 0 }} key={index} onClick={() => handleDropdownClick(item)}>{item}</motion.a>)
+                            }
+
                         })}
 
 

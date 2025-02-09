@@ -35,7 +35,14 @@ export default function Header({ ...props }) {
             router.push('/')
         } else if (item === 'Design') {
             router.push('/design')
-        } else if (item === 'LinkedIn') {
+        }
+        else if (item === 'Mobile Case Study') {
+            router.push('/design/MobileCaseStudy')
+        }
+        else if (item === 'Learning Case Study') {
+            router.push('/design/LearningCaseStudy')
+        }
+        else if (item === 'LinkedIn') {
             window.open('https://www.linkedin.com/in/troy-bedingfield-0b5850a/', '_blank');
         } else if (item === 'GitHub') {
             window.open('https://github.com/troybedingfield/', '_blank');
@@ -56,10 +63,10 @@ export default function Header({ ...props }) {
             <div className="header-container">
                 <div className="left-header left relative flex items-center gap-4">
                     <div className='mobile-left-menu'>
-                        <MobileMenu menuItems={['Home', 'Design', 'LinkedIn', 'GitHub']} handleMobileMenuClick={handleMobileMenuClick} />
+                        <MobileMenu menuItems={['Home', 'Design', ['Mobile Case Study', 'Learning Case Study'], 'LinkedIn', 'GitHub']} handleMobileMenuClick={handleMobileMenuClick} />
                     </div>
                     <div className="header-name text-center" onClick={() => router.push('/')}>Troy Bedingfield</div>
-                    <div className='desktop-left-menu'>
+                    <div className='desktop-left-menu flex'>
                         {/* {(() => {
                             if (pathname === '/design') {
                                 return <Button fill='clear' customColor='#000000' customBGColor='var(--color-clear-button-hover)' maxHeight={36} classNames='flex items-center'>Design</Button>;
@@ -71,6 +78,18 @@ export default function Header({ ...props }) {
                             <Button fill='clear' customColor='#000000' customBGColor='var(--color-clear-button-hover)' maxHeight={36} classNames='flex items-center'>Design</Button>
                             :
                             <Button fill='clear' customColor='#000000' maxHeight={36} classNames='flex items-center' buttonClick={() => router.push('/design')}>Design</Button>
+
+                        }
+                        {pathname === '/design/MobileCaseStudy' ?
+                            <Button fill='clear' customColor='#000000' customBGColor='var(--color-clear-button-hover)' maxHeight={36} classNames='flex items-center'>Mobile Case Study</Button>
+                            :
+                            <Button fill='clear' customColor='#000000' maxHeight={36} classNames='flex items-center' buttonClick={() => router.push('/design/MobileCaseStudy')}>Mobile Case Study</Button>
+
+                        }
+                        {pathname === '/design/LearningCaseStudy' ?
+                            <Button fill='clear' customColor='#000000' customBGColor='var(--color-clear-button-hover)' maxHeight={36} classNames='flex items-center'>Learning Case Study</Button>
+                            :
+                            <Button fill='clear' customColor='#000000' maxHeight={36} classNames='flex items-center' buttonClick={() => router.push('/design/LearningCaseStudy')}>Learning Case Study</Button>
 
                         }
 

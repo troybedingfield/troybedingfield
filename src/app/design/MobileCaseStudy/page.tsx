@@ -34,7 +34,7 @@ export default function CaseStudy() {
 
             <div className="cscopy-section">
                 <div className="inner-container text-center">
-                    <h3>The Challenge?</h3>
+                    <h3 className='font-bold'>The Challenge?</h3>
                     <p>The company leadership approached our team and asked us to rethink and overhaul our mobile app based on
                         app store download and usage analytics to drive new downloads, improve engagment, and make it easier to
                         use. </p>
@@ -71,7 +71,7 @@ export default function CaseStudy() {
                                 alt={''} />
                         </div>
                         <div className="col">
-                            <h5 className="white">New Main Menu and Submenu</h5>
+                            <h5 className="white font-bold">New Main Menu and Submenu</h5>
                             <p className="white">Based on our research and industry standards we moved the main menu to the bottom,
                                 made it persistent, and identified 5 section categories our products and pages fit into.</p>
                             <p className="white">We created a submenu based on our pill button from the web app that would allow us
@@ -102,7 +102,7 @@ export default function CaseStudy() {
 
             <div className="cscopy-section">
                 <div className="inner-container text-center">
-                    <h3>The Prototype</h3>
+                    <h3 className='font-bold'>The Prototype</h3>
                     <p>We created a high fidelity prototype to share with the internal stakeholders and from the positive
                         response and feedback the company stakeholder asked the mobile development to create a functional
                         prototype to beta test with companies and for a conference</p>
