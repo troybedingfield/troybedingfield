@@ -93,7 +93,7 @@ export default function CaseStudy() {
             <div className="cscopy-section">
                 <div className="inner-container text-center">
                     <h3>Development</h3>
-                    <p>Since we had such a tight deadline and turn around we worked directly with the development team to hand off pages per flow and provide quick feedback and updated designs. We made sure we convereted our colors to variables and worked out the best system for that particular Dev so there wasn't any roadblocks. </p>
+                    <p>Since we had such a tight deadline and turn around we worked directly with the development team to hand off pages per flow and provide quick feedback and updated designs. We made sure we convereted our colors to variables and worked out the best system for that particular Dev so there wasn&apos;t any roadblocks. </p>
 
                     <div className="button-container">
                         <Button buttonClick={designSystemLink}>Figma Link</Button>
