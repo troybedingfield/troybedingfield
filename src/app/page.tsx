@@ -79,7 +79,8 @@ export default function Home() {
         <div className="inner-container">
           <p className="text-center">Workflow Designs and Design System Components from Figma</p>
 
-          <Carousel selHeight={800} images={['/carousel-home/4.png', '/carousel-home/1.png', '/carousel-home/2.png', '/carousel-home/3.png']} />
+          {/* <Carousel selHeight={800} images={['/carousel-home/4.png', '/carousel-home/1.png', '/carousel-home/2.png', '/carousel-home/3.png']} /> */}
+          <Carousel selHeight={800} interval={6000} automatic images={['/carousel-home/4.png', '/carousel-home/1.png', '/carousel-home/2.png', '/carousel-home/3.png']} />
 
           <p className="text-center">Click to see more designs and prototypes of a user workflow</p>
           <div className="button-container">
