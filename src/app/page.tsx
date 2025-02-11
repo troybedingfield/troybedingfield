@@ -58,8 +58,8 @@ export default function Home() {
             animate={{ y: 20, opacity: 1 }}
             transition={{ type: "spring", stiffness: 50, duration: 0.2, ease: "easeInOut" }}>
 
-            {/* <img src="troy-homepage-montage-01.png" alt="saas-examples" width="100%" /> */}
-            <Image src="/troy-homepage-montage-01.png" alt="saas-examples" width="1107" height="532" sizes="((max-width: 768px) 100vw, (max-height: auto) 100vh )" style={{ objectFit: "contain" }} />
+            {/* <img src="troy-homepage-montage-01.webp" alt="saas-examples" width="100%" /> */}
+            <Image src="/troy-homepage-montage-01.webp" alt="saas-examples" width="1107" height="532" sizes="((max-width: 768px) 100vw, (max-height: auto) 100vh )" style={{ objectFit: "contain" }} />
           </motion.div>
         </div>
       </div>
@@ -79,8 +79,8 @@ export default function Home() {
         <div className="inner-container">
           <p className="text-center">Workflow Designs and Design System Components from Figma</p>
 
-          {/* <Carousel selHeight={800} images={['/carousel-home/4.png', '/carousel-home/1.png', '/carousel-home/2.png', '/carousel-home/3.png']} /> */}
-          <Carousel selHeight={800} interval={6000} automatic images={['/carousel-home/4.png', '/carousel-home/1.png', '/carousel-home/2.png', '/carousel-home/3.png']} />
+          {/* <Carousel selHeight={800} images={['/carousel-home/4.webp', '/carousel-home/1.webp', '/carousel-home/2.webp', '/carousel-home/3.webp']} /> */}
+          <Carousel selHeight={800} interval={6000} automatic images={['/carousel-home/4.webp', '/carousel-home/1.webp', '/carousel-home/2.webp', '/carousel-home/3.webp']} />
 
           <p className="text-center">Click to see more designs and prototypes of a user workflow</p>
           <div className="button-container">

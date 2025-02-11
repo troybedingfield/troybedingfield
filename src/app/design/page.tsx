@@ -52,7 +52,7 @@ export default function Design() {
                     <div className="img-container mb-6">
                         <motion.img initial={{ y: -20, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
-                            transition={{ type: "spring", stiffness: 50, }} style={{ maxWidth: 1024, width: '100%' }} src="/MobileCaseStudy/csimage1.png" alt={''} />
+                            transition={{ type: "spring", stiffness: 50, }} style={{ maxWidth: 1024, width: '100%' }} src="/MobileCaseStudy/csimage1.webp" alt={''} />
                     </div>
                     <div className="button-container">
                         <Button color="secondary" buttonClick={() => router.push('/design/MobileCaseStudy')}>View Case Study</Button>
@@ -67,7 +67,7 @@ export default function Design() {
                         <div className="img-container mb-6">
                             <motion.img initial={{ y: -20, opacity: 0 }}
                                 animate={{ y: 0, opacity: 1 }}
-                                transition={{ type: "spring", stiffness: 50, }} style={{ maxWidth: 1024, width: '100%' }} src="/carousel-home/3.png" alt={''} />
+                                transition={{ type: "spring", stiffness: 50, }} style={{ maxWidth: 1024, width: '100%' }} src="/carousel-home/3.webp" alt={''} />
                         </div>
                         <div className="button-container">
                             <Button color="secondary" buttonClick={() => router.push('/design/LearningCaseStudy')}>View Case Study</Button>
@@ -79,7 +79,7 @@ export default function Design() {
             <div className="design-system-container">
                 <h3 className="text-center">Design system I created and managed in Figma</h3>
                 <div className="inner-carousel-container">
-                    <Carousel selHeight={500} interval={6000} automatic images={['/design-section-1/2.png', '/design-section-1/4.png', '/design-section-1/3.png']} />
+                    <Carousel selHeight={500} interval={6000} automatic images={['/design-section-1/2.webp', '/design-section-1/4.webp', '/design-section-1/3.webp']} />
                 </div>
             </div>
 
@@ -98,7 +98,7 @@ export default function Design() {
             <div className="design-top-section">
                 <h3 className="text-center">Figma design screens of a user workflow</h3>
                 <div className="inner-carousel-container top-section">
-                    <Carousel selHeight={500} interval={6000} automatic images={['/design-section-2/1.png', '/design-section-2/2.png', '/design-section-2/3.png', '/design-section-2/4.png', '/design-section-2/5.png', '/design-section-2/6.png', '/design-section-2/7.png', '/design-section-2/8.png']} />
+                    <Carousel selHeight={500} interval={6000} automatic images={['/design-section-2/1.webp', '/design-section-2/2.webp', '/design-section-2/3.webp', '/design-section-2/4.webp', '/design-section-2/5.webp', '/design-section-2/6.webp', '/design-section-2/7.webp', '/design-section-2/8.webp']} />
                 </div>
 
                 <div className="user-flow-container">
@@ -148,7 +148,7 @@ export default function Design() {
             <div className="journeyAndFlows top-section">
                 <h3 className="text-center">Figma user journey and user flows</h3>
                 <div className="inner-carousel-container top-section">
-                    <Carousel arrowColor='white' selHeight={500} interval={6000} automatic images={['design-section-3/journey.png', 'design-section-3/group1.png', 'design-section-3/group2.png', 'design-section-3/group3.png']} />
+                    <Carousel arrowColor='white' selHeight={500} interval={6000} automatic images={['design-section-3/journey.webp', 'design-section-3/group1.webp', 'design-section-3/group2.webp', 'design-section-3/group3.webp']} />
                 </div>
 
             </div>

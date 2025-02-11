@@ -23,7 +23,7 @@ export default function CaseStudy() {
             <div className="design-system-container">
 
                 <div className="img-container">
-                    <img style={{ maxWidth: 1024 }} src="/carousel-home/3.png" alt={''} />
+                    <img style={{ maxWidth: 1024 }} src="/carousel-home/3.webp" alt={''} />
                 </div>
                 <div className="button-container">
 
@@ -46,14 +46,14 @@ export default function CaseStudy() {
                             <p className='p-2'>We also created some new patterns and components for employees to view their assigned training and see a thumbnail, course description, and progress/status on due date.</p>
                         </div>
                         <div className="col center">
-                            <img src="/design-section-3/journey.png"
+                            <img src="/design-section-3/journey.webp"
                                 alt={''} />
                         </div>
                     </div>
                 </div>
                 <div className='relative flex flex-col m-12 gap-6'>
-                    <img src='/LearningCaseStudy/flow4.png' />
-                    <img src='/LearningCaseStudy/views.png' />
+                    <img src='/LearningCaseStudy/flow4.webp' />
+                    <img src='/LearningCaseStudy/views.webp' />
                 </div>
             </div>
 
@@ -63,7 +63,7 @@ export default function CaseStudy() {
                 <div className="inner-container ">
                     <div className="col-container">
                         <div className="col center">
-                            <img src="/LearningCaseStudy/learning1.png" style={{ marginTop: 24, maxWidth: 575 }}
+                            <img src="/LearningCaseStudy/learning1.webp" style={{ marginTop: 24, maxWidth: 575 }}
                                 alt={''} />
                         </div>
                         <div className="col">
@@ -80,7 +80,7 @@ export default function CaseStudy() {
             <div className="design-system-container">
                 <p className="text-center white">Since time was a factor we utilized horizontal scrolling for our page layout stepped workflow section that worked on Mobile but was a compromise due to time constraints.</p>
                 <div className="img-container">
-                    <img className='desktop-image' style={{ maxWidth: 1248 }} src="/LearningCaseStudy/desktop-mobile-builder.png" alt={''} />
+                    <img className='desktop-image' style={{ maxWidth: 1248 }} src="/LearningCaseStudy/desktop-mobile-builder.webp" alt={''} />
                 </div>
                 <div className="button-container">
 
