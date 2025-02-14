@@ -124,8 +124,8 @@ export default function Home() {
 
 
 
-      <div className="figma-work flex relative text-center justify-center  p-[24px]">
-        <div className="inner-container w-auto flex text-center relative justify-center">
+      <div className="figma-work flex relative text-center justify-center w-auto p-[24px]">
+        <div className="inner-container w-auto flex !flex-row text-center relative justify-center">
           <motion.h5 initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, ease: "easeInOut" }}
