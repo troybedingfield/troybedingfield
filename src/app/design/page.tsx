@@ -77,6 +77,13 @@ export default function Design() {
             </MotionConfig>
 
             <div className="design-system-container">
+
+                <div className='research flex relative flex-col items-center pb-24'>
+                    <h3 className="text-center">Research</h3>
+                    <p>We used Airtable to organize feedback and display it in a way that generates valuable insights.</p>
+                    <img src="/airtable-research.webp" width={800} alt="" />
+                </div>
+
                 <h3 className="text-center">Design system I created and managed in Figma</h3>
                 <div className="inner-carousel-container">
                     <Carousel selHeight={500} interval={6000} automatic images={['/design-section-1/2.webp', '/design-section-1/4.webp', '/design-section-1/3.webp']} />

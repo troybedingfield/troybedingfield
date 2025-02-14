@@ -3,8 +3,8 @@
     height: 100%;
     width: 100%;
     flex-direction: column;
-    padding: 24px 0;
-    gap: 12px;
+    // padding: 24px 0;
+    // gap: 12px;
     background: rgba($color: #007cba, $alpha: 1);
     // background: linear-gradient(0deg, rgba(0, 18, 54, 1) 4%, rgba(18, 121, 168, 1) 42%, rgba(0, 212, 255, 1) 80%, rgba(207, 247, 255, 1) 100%);
     // background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 18, 54, 1) 32%, rgba(18, 121, 168, 1) 58%, rgba(0, 212, 255, 1) 80%, rgba(207, 247, 255, 1) 100%);
@@ -16,9 +16,9 @@
 
 .home-top-text {
     display: flex;
-    flex-direction: column;
+    // flex-direction: column;
     justify-content: center;
-    padding: 0 12px 24px 12px;
+    // padding: 0 12px 24px 12px;
     max-width: 1280px;
     margin: 0 auto;
     width: 100%;
@@ -32,7 +32,7 @@
 
 .saas-work {
     background-color: rgba($color: white, $alpha: 0.98);
-    padding: 12px 0;
+    // margin: 12px 0;
 
 
     .inner-container {
@@ -166,8 +166,8 @@
 
 
 .figma-work {
-    padding: 36px 0;
-    margin-top: -12px;
+    // padding: 36px 0;
+    // margin-top: -12px;
     background-color: rgba($color: #001C29, $alpha: .6);
 
     p {
@@ -179,7 +179,7 @@
         display: flex;
         flex-direction: column;
         margin: 0 auto;
-        width: 100%;
+        width: auto;
     }
 
     .button-container {
