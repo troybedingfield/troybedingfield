@@ -1,6 +1,7 @@
 'use client'
 import './page.scss'
 import Button from "../../components/Button/Button"
+import { motion, MotionConfig } from 'motion/react'
 
 export default function CaseStudy() {
 
@@ -12,51 +13,59 @@ export default function CaseStudy() {
 
     return (
         <div className="design-container-cs">
-
-            <div className="case-study">
-                <div className="inner-container">
-                    <h3 className="text-center white">Learning Management Case Study</h3>
-                </div>
-            </div>
-
-
-            <div className="design-system-container">
-
-                <div className="img-container">
-                    <img style={{ maxWidth: 1024 }} src="/carousel-home/3.webp" alt={''} />
-                </div>
-                <div className="button-container">
-
-
-                </div>
-            </div>
-
-
-            <div className="cscopy-section">
-                <div className="inner-container text-center">
-                    <h3>The Challenge?</h3>
-                    <p className='mb-12'>Our contract was ending with the 3rd party learning management system so we had 6 months to create our own product that could be viable and provide the basic needs of a learning management system.</p>
-                </div>
-                <div className="inner-container ">
-                    <div className="col-container">
-                        <div className="col">
-                            <h5 className='font-bold'>User Journeys, Flows, and Views</h5>
-                            <p className='p-2'>After conducting our competitive analysis and determining our business requirements for our initial launch we created Journeys and flows for our established user personas and focused on our admin/managers being able to view already assigned and assign new employees to training.</p>
-                            <p className='p-2'>From our multiple personas we created views and refined required data that needed to be accessed per role and proposed some updates to our filtering and action bar components that could work across our personas.</p>
-                            <p className='p-2'>We also created some new patterns and components for employees to view their assigned training and see a thumbnail, course description, and progress/status on due date.</p>
-                        </div>
-                        <div className="col center">
-                            <img src="/design-section-3/journey.webp"
-                                alt={''} />
-                        </div>
+            <MotionConfig transition={{ duration: 0.2, ease: "easeInOut" }}>
+                <div className="case-study">
+                    <div className="inner-container">
+                        <motion.h3 initial={{ y: -20, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{ type: "spring", stiffness: 50, }} className="text-center white">Learning Management Case Study</motion.h3>
                     </div>
                 </div>
-                <div className='relative flex flex-col m-12 gap-6'>
-                    <img src='/LearningCaseStudy/flow4.webp' />
-                    <img src='/LearningCaseStudy/views.webp' />
-                </div>
-            </div>
 
+
+                <div className="design-system-container">
+
+                    <div className="img-container">
+                        <motion.img initial={{ y: -20, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{ type: "spring", stiffness: 50, }} style={{ maxWidth: 1024 }} src="/carousel-home/3.webp" alt={''} />
+                    </div>
+                    <div className="button-container">
+
+
+                    </div>
+                </div>
+
+
+                <div className="cscopy-section">
+                    <div className="inner-container text-center">
+                        <motion.h3 initial={{ y: -20, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{ type: "spring", stiffness: 50, }}>The Challenge?</motion.h3>
+                        <motion.p initial={{ y: -20, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{ type: "spring", stiffness: 50, }} className='mb-12'>Our contract was ending with the 3rd party learning management system so we had 6 months to create our own product that could be viable and provide the basic needs of a learning management system.</motion.p>
+                    </div>
+                    <div className="inner-container ">
+                        <div className="col-container">
+                            <div className="col">
+                                <h5 className='font-bold'>User Journeys, Flows, and Views</h5>
+                                <p className='p-2'>After conducting our competitive analysis and determining our business requirements for our initial launch we created Journeys and flows for our established user personas and focused on our admin/managers being able to view already assigned and assign new employees to training.</p>
+                                <p className='p-2'>From our multiple personas we created views and refined required data that needed to be accessed per role and proposed some updates to our filtering and action bar components that could work across our personas.</p>
+                                <p className='p-2'>We also created some new patterns and components for employees to view their assigned training and see a thumbnail, course description, and progress/status on due date.</p>
+                            </div>
+                            <div className="col center">
+                                <img src="/design-section-3/journey.webp"
+                                    alt={''} />
+                            </div>
+                        </div>
+                    </div>
+                    <div className='relative flex flex-col m-12 gap-6'>
+                        <img src='/LearningCaseStudy/flow4.webp' />
+                        <img src='/LearningCaseStudy/views.webp' />
+                    </div>
+                </div>
+            </MotionConfig>
 
             <div className="cscopy-section-alt">
 

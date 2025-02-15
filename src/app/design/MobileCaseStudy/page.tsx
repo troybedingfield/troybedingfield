@@ -1,6 +1,7 @@
 'use client'
 import './page.scss'
 import Button from "../../components/Button/Button"
+import { motion, MotionConfig } from 'motion/react'
 
 export default function CaseStudy() {
 
@@ -12,55 +13,63 @@ export default function CaseStudy() {
 
     return (
         <div className="design-container-cs">
-
-            <div className="case-study">
-                <div className="inner-container">
-                    <h3 className="text-center white">Mobile App Case Study</h3>
+            <MotionConfig transition={{ duration: 0.2, ease: "easeInOut" }}>
+                <div className="case-study">
+                    <div className="inner-container">
+                        <motion.h3 initial={{ y: -20, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{ type: "spring", stiffness: 50, }} className="text-center white">Mobile App Case Study</motion.h3>
+                    </div>
                 </div>
-            </div>
 
 
-            <div className="design-system-container">
+                <div className="design-system-container">
 
-                <div className="img-container">
-                    <img style={{ maxWidth: 1024 }} src="/MobileCaseStudy/csimage1.webp" alt={''} />
+                    <div className="img-container">
+                        <motion.img initial={{ y: -20, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{ type: "spring", stiffness: 50, }} style={{ maxWidth: 1024 }} src="/MobileCaseStudy/csimage1.webp" alt={''} />
+                    </div>
+                    <div className="button-container">
+
+
+                    </div>
                 </div>
-                <div className="button-container">
 
 
-                </div>
-            </div>
-
-
-            <div className="cscopy-section">
-                <div className="inner-container text-center">
-                    <h3 className='font-bold'>The Challenge?</h3>
-                    <p>The company leadership approached our team and asked us to rethink and overhaul our mobile app based on
-                        app store download and usage analytics to drive new downloads, improve engagment, and make it easier to
-                        use. </p>
-                </div>
-                <div className="inner-container ">
-                    <div className="col-container">
-                        <div className="col">
-                            <h5>Main Menu and Page Organization</h5>
-                            <p>Our mobile app was originally built to match the minimally responsive web pages with all of the
-                                pages and products listed in the menu causing a very long and overwhelming experience for users
-                                to find what they need and make sense of where they need to go to access desired workflows. </p>
-                            <p>We started by looking at analytics and user feedback on the most commonly used pages and
-                                functions and put pages into content type buckets so we coul rethink the menu and product pieces
-                                that the users cared about.</p>
-                            <p>This also lead to us taking the mobile app and looking at keeping consistentcy with out brand
-                                and web app so that it doesn&apos;t feel like a different product but also update the functionality
-                                and design for a true mobile app experience.</p>
-                        </div>
-                        <div className="col center">
-                            <img src="/MobileCaseStudy/csimage2.webp" style={{ marginTop: 24, maxWidth: 300 }}
-                                alt={''} />
+                <div className="cscopy-section">
+                    <div className="inner-container text-center">
+                        <motion.h3 initial={{ y: -20, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{ type: "spring", stiffness: 50, }} className='font-bold'>The Challenge?</motion.h3>
+                        <motion.p initial={{ y: -20, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{ type: "spring", stiffness: 50, }}>The company leadership approached our team and asked us to rethink and overhaul our mobile app based on
+                            app store download and usage analytics to drive new downloads, improve engagment, and make it easier to
+                            use. </motion.p>
+                    </div>
+                    <div className="inner-container ">
+                        <div className="col-container">
+                            <div className="col">
+                                <h5>Main Menu and Page Organization</h5>
+                                <p>Our mobile app was originally built to match the minimally responsive web pages with all of the
+                                    pages and products listed in the menu causing a very long and overwhelming experience for users
+                                    to find what they need and make sense of where they need to go to access desired workflows. </p>
+                                <p>We started by looking at analytics and user feedback on the most commonly used pages and
+                                    functions and put pages into content type buckets so we coul rethink the menu and product pieces
+                                    that the users cared about.</p>
+                                <p>This also lead to us taking the mobile app and looking at keeping consistentcy with out brand
+                                    and web app so that it doesn&apos;t feel like a different product but also update the functionality
+                                    and design for a true mobile app experience.</p>
+                            </div>
+                            <div className="col center">
+                                <img src="/MobileCaseStudy/csimage2.webp" style={{ marginTop: 24, maxWidth: 300 }}
+                                    alt={''} />
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
+            </MotionConfig>
 
             <div className="cscopy-section-alt">
 
