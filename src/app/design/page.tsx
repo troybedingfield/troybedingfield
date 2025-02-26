@@ -91,9 +91,9 @@ export default function Design() {
 
             <div className="figma-work">
                 <div className="inner-container">
-                    <div className='pb-24'>
+                    <div className='pb-12'>
                         <h3 className="text-center">Design system</h3>
-                        <p className="text-center">placeholder text</p>
+                        <p className="text-center">Design systems are important and should be easily accessible and well documented for the entire company to consume. I created and managed our internal style guide, component and pattern library, and contributed to our documentation while working with all of our cross functional teams to ensure everyone was aware and had input.</p>
                     </div>
 
                     <div>
@@ -103,10 +103,10 @@ export default function Design() {
                         <Carousel selHeight={500} interval={6000} automatic images={['/design-section-1/2.webp', '/design-section-1/4.webp', '/design-section-1/3.webp']} />
                     </div>
 
-                    <p className="text-center">Built and managed our component and pattern library in Figma to match what we defined in our
+                    {/* <p className="text-center">Built and managed our component and pattern library in Figma to match what we defined in our
                         styleguide and built them to match how they are built in code and setup the same properties and added
                         code
-                        snippets so the design and development can match and be consistent</p>
+                        snippets so the design and development can match and be consistent</p> */}
                     <div className='mx-auto'>
 
                         <Button classNames='w-auto' buttonClick={designSystemLink}>Figma Link</Button>
@@ -126,16 +126,17 @@ export default function Design() {
             </div>
 
             <div className="design-top-section">
-                <h3 className="text-center">Figma design screens of a user workflow</h3>
+                <h3 className="text-center">User Journey & flows</h3>
+                <p className='text-center max-w-[800px] mx-auto'>User journeys & Flows help all teams understand the requirements and problem that needs to be solved for the user. I created a journey and flows for a manager to add courses and see who has completed them for a Learning Management System.</p>
                 <div className="inner-carousel-container top-section">
-                    <Carousel selHeight={500} interval={6000} automatic images={['/design-section-2/1.webp', '/design-section-2/2.webp', '/design-section-2/3.webp', '/design-section-2/4.webp', '/design-section-2/5.webp', '/design-section-2/6.webp', '/design-section-2/7.webp', '/design-section-2/8.webp']} />
+                    <Carousel selHeight={500} interval={6000} automatic images={['design-section-3/journey.webp', 'design-section-3/group1.webp', 'design-section-3/group2.webp', 'design-section-3/group3.webp', '/design-section-2/1.webp', '/design-section-2/2.webp', '/design-section-2/3.webp', '/design-section-2/4.webp', '/design-section-2/5.webp', '/design-section-2/6.webp', '/design-section-2/7.webp', '/design-section-2/8.webp']} />
                 </div>
 
                 <div className="user-flow-container">
                     <div className="inner-container">
-                        <p className="text-center">Created responsive designs and setup prototypes for a user flow with another designer
+                        {/* <p className="text-center">Created responsive designs and setup prototypes for a user flow with another designer
                             for a new product we were working on while building out the design system so we could refine and add
-                            components and prototyping sections to make it easier for the UX team to create in Figma </p>
+                            components and prototyping sections to make it easier for the UX team to create in Figma </p> */}
                         <Button buttonClick={userFlowLink}>Figma Link</Button>
                     </div>
                 </div>
@@ -144,26 +145,31 @@ export default function Design() {
 
 
             <div className="figma-work">
-                <div className="inner-container">
+                <div className="inner-container pb-6">
+                    <div className='pb-6'>
+                        <h3 className="text-center">Prototypes</h3>
+                        <p className="text-center">Protoypes play and important role in showing the experience and interactions of a product and helps cross functional teams get a better understading of the use and feel of a new feature or product</p>
+                    </div>
                     <div className="text-center">
                         <p>Click to see Figma Prototypes</p>
-                        <div className="button-container">
-                            <Button minWidth={75} customBGColor="#1abcfe" buttonClick={viewDesktop}>Desktop</Button>
-                            <Button minWidth={75} customBGColor="#1abcfe" buttonClick={viewTablet}>Tablet</Button>
-                            <Button minWidth={75} customBGColor="#1abcfe" buttonClick={viewMobile}>Mobile</Button>
+                        <div className="button-container flex gap-4 pb-6">
+                            {showDesktop ? <Button minWidth={75} customBGColor="#1abcfe" buttonClick={viewDesktop}>close</Button> : <Button minWidth={75} customBGColor="#1abcfe" buttonClick={viewDesktop}>Desktop</Button>}
+                            {showTablet ? <Button minWidth={75} customBGColor="#1abcfe" buttonClick={viewTablet}>close</Button> : <Button minWidth={75} customBGColor="#1abcfe" buttonClick={viewTablet}>Tablet</Button>}
+                            {showMobile ? <Button minWidth={75} customBGColor="#1abcfe" buttonClick={viewMobile}>close</Button> : <Button minWidth={75} customBGColor="#1abcfe" buttonClick={viewMobile}>Mobile</Button>}
                         </div>
                     </div>
+
                     {showDesktop && <div id="figma-desktop-container" >
                         <iframe className=" responsive-iframe"
                             src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FJhyHuflMdoV9qNb7tXCyeU%2FUser-Flow%3Fnode-id%3D15-25105%26t%3DMMN3ouwtJn7PuhZv-1%26scaling%3Dmin-zoom%26content-scaling%3Dfixed%26page-id%3D0%253A1%26starting-point-node-id%3D6%253A12504%26hide-ui%3D1"
                             allowFullScreen></iframe>
                     </div>}
-                    {showTablet && <div id="figma-mobile-container" >
+                    {showMobile && <div id="figma-mobile-container" >
                         <iframe className=" responsive-iframe"
                             src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FJhyHuflMdoV9qNb7tXCyeU%2FUser-Flow%3Fnode-id%3D47-60563%26t%3DVwa3RZsSxcq3pG5x-1%26scaling%3Dscale-down%26content-scaling%3Dfixed%26page-id%3D47%253A69285%26starting-point-node-id%3D47%253A57686%26hide-ui%3D1"
                             allowFullScreen></iframe>
                     </div>}
-                    {showMobile && <div id="figma-tablet-container" >
+                    {showTablet && <div id="figma-tablet-container" >
                         <iframe className=" responsive-iframe"
                             src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FJhyHuflMdoV9qNb7tXCyeU%2FUser-Flow%3Fnode-id%3D159-18892%26t%3DExZiCGue67PITuAv-1%26scaling%3Dscale-down%26content-scaling%3Dfixed%26page-id%3D159%253A18891%26starting-point-node-id%3D159%253A18892%26hide-ui%3D1"
                             allowFullScreen></iframe>
@@ -175,7 +181,10 @@ export default function Design() {
 
 
 
-            <div className="journeyAndFlows top-section">
+
+
+
+            {/* <div className="journeyAndFlows top-section">
                 <h3 className="text-center">Figma user journey and user flows</h3>
                 <div className="inner-carousel-container top-section">
                     <Carousel arrowColor='white' selHeight={500} interval={6000} automatic images={['design-section-3/journey.webp', 'design-section-3/group1.webp', 'design-section-3/group2.webp', 'design-section-3/group3.webp']} />
@@ -188,7 +197,7 @@ export default function Design() {
                     <p className="text-center">Click to see user journey with user flows</p>
                     <Button buttonClick={userJourneyLink}>Figma Link</Button>
                 </div>
-            </div>
+            </div> */}
 
 
 

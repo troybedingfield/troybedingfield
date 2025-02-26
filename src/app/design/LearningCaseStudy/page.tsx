@@ -2,8 +2,32 @@
 import './page.scss'
 import Button from "../../components/Button/Button"
 import { motion, MotionConfig } from 'motion/react'
+import { useState } from 'react';
 
 export default function CaseStudy() {
+
+    const [showDesktop, setShowDesktop] = useState(false);
+    const [showTablet, setShowTablet] = useState(false);
+    const [showMobile, setShowMobile] = useState(false);
+
+    function viewDesktop() {
+        setShowDesktop(showDesktop => !showDesktop);
+        setShowTablet(false);
+        setShowMobile(false);
+    }
+
+    function viewTablet() {
+        setShowDesktop(false);
+        setShowTablet(showTablet => !showTablet);
+        setShowMobile(false);
+    }
+
+    function viewMobile() {
+        setShowDesktop(false);
+        setShowTablet(false);
+        setShowMobile(showMobile => !showMobile);
+    }
+
 
 
     function designSystemLink() {
@@ -12,7 +36,7 @@ export default function CaseStudy() {
 
 
     return (
-        <div className="design-container-cs">
+        <div className="design-container-cs !gap-0">
             <MotionConfig transition={{ duration: 0.2, ease: "easeInOut" }}>
                 <div className="case-study">
                     <div className="inner-container">
@@ -87,7 +111,7 @@ export default function CaseStudy() {
             </div>
 
             <div className="design-system-container">
-                <p className="text-center white">Since time was a factor we utilized horizontal scrolling for our page layout stepped workflow section that worked on Mobile but was a compromise due to time constraints.</p>
+                <p className="text-center white !max-w-[800px]">Since time was a factor we utilized horizontal scrolling for our page layout stepped workflow section that worked on Mobile but was a compromise due to time constraints.</p>
                 <div className="img-container">
                     <img className='desktop-image' style={{ maxWidth: 1248 }} src="/LearningCaseStudy/desktop-mobile-builder.webp" alt={''} />
                 </div>
@@ -98,11 +122,45 @@ export default function CaseStudy() {
             </div>
 
 
+            <div className="figma-work">
+                <div className="inner-container text-center">
+                    <h3 className='font-bold color-white'>The Prototype</h3>
+                    <p className='max-w-[800px] mx-auto m-6'>We created a high fidelity prototype to share with the internal stakeholders and for the Product Manager and Developers so that we had a clear path forward with such a tight deadline</p>
+                    <div className="text-center">
+                        <p>Click to see Figma Prototypes</p>
+                        <div className="button-container flex gap-4 pb-6">
+                            {showDesktop ? <Button minWidth={75} buttonClick={viewDesktop}>close</Button> : <Button minWidth={75} buttonClick={viewDesktop}>Desktop</Button>}
+                            {showTablet ? <Button minWidth={75} buttonClick={viewTablet}>close</Button> : <Button minWidth={75} buttonClick={viewTablet}>Tablet</Button>}
+                            {showMobile ? <Button minWidth={75} buttonClick={viewMobile}>close</Button> : <Button minWidth={75} buttonClick={viewMobile}>Mobile</Button>}
+                        </div>
+                    </div>
+                    <div className='flex justify-center'>
+                        {showDesktop && <div id="figma-desktop-container" >
+                            <iframe className=" responsive-iframe"
+                                src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FJhyHuflMdoV9qNb7tXCyeU%2FUser-Flow%3Fnode-id%3D15-25105%26t%3DMMN3ouwtJn7PuhZv-1%26scaling%3Dmin-zoom%26content-scaling%3Dfixed%26page-id%3D0%253A1%26starting-point-node-id%3D6%253A12504%26hide-ui%3D1"
+                                allowFullScreen></iframe>
+                        </div>}
+                        {showMobile && <div id="figma-mobile-container" >
+                            <iframe className=" responsive-iframe"
+                                src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FJhyHuflMdoV9qNb7tXCyeU%2FUser-Flow%3Fnode-id%3D47-60563%26t%3DVwa3RZsSxcq3pG5x-1%26scaling%3Dscale-down%26content-scaling%3Dfixed%26page-id%3D47%253A69285%26starting-point-node-id%3D47%253A57686%26hide-ui%3D1"
+                                allowFullScreen></iframe>
+                        </div>}
+                        {showTablet && <div id="figma-tablet-container" >
+                            <iframe className=" responsive-iframe"
+                                src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FJhyHuflMdoV9qNb7tXCyeU%2FUser-Flow%3Fnode-id%3D159-18892%26t%3DExZiCGue67PITuAv-1%26scaling%3Dscale-down%26content-scaling%3Dfixed%26page-id%3D159%253A18891%26starting-point-node-id%3D159%253A18892%26hide-ui%3D1"
+                                allowFullScreen></iframe>
+                        </div>}
+                    </div>
+                </div>
+
+            </div>
+
+
 
             <div className="cscopy-section">
                 <div className="inner-container text-center">
                     <h3>Development</h3>
-                    <p>Since we had such a tight deadline and turn around we worked directly with the development team to hand off pages per flow and provide quick feedback and updated designs. We made sure we converted our colors to variables and worked out the best system for that particular developer so there wasn&apos;t any roadblocks.</p>
+                    <p className='max-w-[800px]'>Since we had such a tight deadline and turn around we worked directly with the development team to hand off pages per flow and provide quick feedback and updated designs. We made sure we converted our colors to variables and worked out the best system for that particular developer so there wasn&apos;t any roadblocks.</p>
 
                     <div className="button-container">
                         <Button buttonClick={designSystemLink}>Figma Link</Button>
