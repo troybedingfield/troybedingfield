@@ -84,21 +84,44 @@ export default function Design() {
                     <img src="/airtable-research.webp" width={800} alt="" />
                 </div>
 
-                <h3 className="text-center">Design system I created and managed in Figma</h3>
-                <div className="inner-carousel-container">
-                    <Carousel selHeight={500} interval={6000} automatic images={['/design-section-1/2.webp', '/design-section-1/4.webp', '/design-section-1/3.webp']} />
-                </div>
+
             </div>
 
 
 
             <div className="figma-work">
                 <div className="inner-container">
-                    <p className="text-center">Built out all our assets and components in Figma to match what we defined in our
+                    <div className='pb-24'>
+                        <h3 className="text-center">Design system</h3>
+                        <p className="text-center">placeholder text</p>
+                    </div>
+
+                    <div>
+                        <h3>Component & pattern Library</h3>
+                    </div>
+                    <div className="inner-carousel-container">
+                        <Carousel selHeight={500} interval={6000} automatic images={['/design-section-1/2.webp', '/design-section-1/4.webp', '/design-section-1/3.webp']} />
+                    </div>
+
+                    <p className="text-center">Built and managed our component and pattern library in Figma to match what we defined in our
                         styleguide and built them to match how they are built in code and setup the same properties and added
                         code
                         snippets so the design and development can match and be consistent</p>
-                    <Button buttonClick={designSystemLink}>Figma Link</Button>
+                    <div className='mx-auto'>
+
+                        <Button classNames='w-auto' buttonClick={designSystemLink}>Figma Link</Button>
+                    </div>
+
+                    <div>
+
+                    </div>
+
+
+                    {/* <p className="text-center">Built and managed our component and pattern library in Figma to match what we defined in our
+                        styleguide and built them to match how they are built in code and setup the same properties and added
+                        code
+                        snippets so the design and development can match and be consistent</p>
+                    <Button buttonClick={designSystemLink}>Figma Link</Button> */}
                 </div>
             </div>
 
