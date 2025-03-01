@@ -41,6 +41,9 @@ export default function Design() {
     function designSystemLink() {
         window.open('https://www.figma.com/design/rOj7ptt7KWZOZdNt2cen4n/Design-System?node-id=1-26&t=GDn677E0etS2kMeb-1')
     }
+    function styleguideLink() {
+        window.open('https://troybedingfield.github.io/style-guide/')
+    }
 
     return (
         <div className="design-container">
@@ -116,6 +119,16 @@ export default function Design() {
 
                     </div>
 
+                    <div className='mt-12'>
+                        <h3>Style Guide</h3>
+                    </div>
+                    <div>
+                        <Image src="/style-guide.png" alt="style guide" width="1107" height="532" sizes="((max-width: 568px) 100vw, (max-height: auto) 100vh )" style={{ objectFit: "contain" }} />
+                    </div>
+                    <div className='mx-auto'>
+
+                        <Button classNames='w-auto' buttonClick={styleguideLink}>Style Guide Link</Button>
+                    </div>
 
                     {/* <p className="text-center">Built and managed our component and pattern library in Figma to match what we defined in our
                         styleguide and built them to match how they are built in code and setup the same properties and added
