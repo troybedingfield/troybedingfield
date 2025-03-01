@@ -42,7 +42,7 @@ export default function Design() {
         window.open('https://www.figma.com/design/rOj7ptt7KWZOZdNt2cen4n/Design-System?node-id=1-26&t=GDn677E0etS2kMeb-1')
     }
     function styleguideLink() {
-        window.open('https://troybedingfield.github.io/style-guide/')
+        window.open('https://style-guide.troybedingfield.com/')
     }
 
     return (
