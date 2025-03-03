@@ -15,8 +15,8 @@ import { useEffect } from "react";
 export default function Home() {
   const router = useRouter()
 
-  function goToReact() {
-    window.open('https://troybedingfield.com')
+  function handleStorybookLink() {
+    window.open('https://troybedingfield.github.io/tb-ui/?path=/docs/components-button--docs')
   }
 
   const COLORS = ["#13FFAA", "#DD335C"];
@@ -153,9 +153,13 @@ export default function Home() {
 
       <div className="component-example">
         <p className="text-center">Component Library Button Example:</p>
-        <p className="text-center">To see the full example setup and documentation <br /><br /> <a
-          href="https://troybedingfield.github.io/tb-ui/?path=/docs/components-button--docs" target="_blank"
-          className="font24">Storybook Link</a></p>
+        <p className="text-center">To see the full example setup and documentation <br />
+          {/* <br />
+          <a
+            href="https://troybedingfield.github.io/tb-ui/?path=/docs/components-button--docs" target="_blank"
+            className="font24">Storybook Link</a> */}
+        </p>
+        <div className="flex mx-auto justify-center py-4"><Button buttonClick={handleStorybookLink}>Storybook Link</Button></div>
         <br />
 
         <TestButton />
