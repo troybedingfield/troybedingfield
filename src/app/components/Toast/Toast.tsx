@@ -1,16 +1,16 @@
 import { createPortal } from "react-dom"
 import './Toast.scss'
-import { useRef } from "react"
+import { RefObject, useRef } from "react"
 
 export default function Toast({ ...props }) {
     const { message, type, state = 'close' } = props
 
-    const toast = useRef<any | undefined>()
+    const toast = useRef<HTMLDivElement | null>(null)
 
-    function dismiss(ref: any) {
+    function dismiss(ref: RefObject<HTMLDivElement | null>) {
         // console.log(ref);
-        ref.current.classList.remove('open');
-        ref.current.classList.add('close');
+        ref.current?.classList.remove('open');
+        ref.current?.classList.add('close');
     }
 
     return (

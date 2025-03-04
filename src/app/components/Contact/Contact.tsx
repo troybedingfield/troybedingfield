@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { FormEvent, RefObject, useRef, useState } from "react";
 import Button from "../Button/Button"
 import Toast from "../Toast/Toast";
 import './Contact.scss'
@@ -14,31 +14,31 @@ export default function Contact({ ...props }) {
 
     const api = "https://d2nbfvp176.execute-api.us-east-2.amazonaws.com/default/sendContactEmail";
 
-    const email = useRef<any | undefined>();
-    const name = useRef<any | undefined>();
-    const message = useRef<any | undefined>();
-    const form = useRef<any | undefined>();
+    const email = useRef<HTMLInputElement | null>(null);
+    const name = useRef<HTMLInputElement | null>(null);
+    const message = useRef<HTMLTextAreaElement | null>(null);
+    const form = useRef<HTMLFormElement | null>(null);
 
     const [showToast, setShowToast] = useState(false)
 
-    const recaptcha = useRef<any | undefined>()
+    const recaptcha = useRef<ReCAPTCHA | null>(null)
 
 
 
-    async function handleFormSubmit(event: any, email: any, name: any, message: any) {
+    async function handleFormSubmit(event: FormEvent<HTMLFormElement>, email: RefObject<null | HTMLInputElement>, name: RefObject<null | HTMLInputElement>, message: RefObject<null | HTMLTextAreaElement>) {
 
         event.preventDefault();
 
-        const captchaValue = recaptcha.current.getValue()
+        const captchaValue = recaptcha.current?.getValue()
 
         if (!captchaValue) {
             alert('Please verify the reCAPTCHA!')
         } else {
             // make form submission
-            let formData = {
-                FullName: name.current.value,
-                Email: email.current.value,
-                Comment: message.current.value
+            const formData = {
+                FullName: name.current?.value,
+                Email: email.current?.value,
+                Comment: message.current?.value
             }
 
             const response = await fetch(api, {
@@ -47,7 +47,7 @@ export default function Contact({ ...props }) {
 
             });
 
-            const resData = await response;
+            const resData = response;
 
             if (resData.status !== 200) {
                 throw new Error('Failed to send email')
@@ -65,7 +65,7 @@ export default function Contact({ ...props }) {
 
 
     function openToast() {
-        form.current.reset();
+        form.current?.reset();
         setShowToast(prevState => !prevState);
         setTimeout(() => {
             setShowToast(prevState => !prevState);

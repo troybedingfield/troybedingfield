@@ -2,17 +2,22 @@ import { AnimatePresence, motion } from 'motion/react';
 import './Carousel.scss'
 import { useCarousel } from './useCarousel';
 
-export default function CarouselNew({ ...props }) {
+export default function CarouselNew(props: {
+    images: string[],
+    selHeight: number,
+    automatic: boolean,
+    arrowColor?: string,
+    interval: number
+}) {
     const {
         images,
-        captions,
         selHeight,
         automatic,
         arrowColor = "black",
         interval } = props
 
 
-    const { slides, currentSlideIndex, slide, isFirstSlide, isLastSlide, handleMouseEnter, handleMouseLeave, back, next, goto } = useCarousel(images, interval, automatic)
+    const { slides, currentSlideIndex, slide, handleMouseEnter, handleMouseLeave, back, next, goto } = useCarousel(images, interval, automatic)
 
 
 
@@ -36,7 +41,7 @@ export default function CarouselNew({ ...props }) {
 
             <div className="text-center">
 
-                {slides && slides.map((item: any, index: number) => {
+                {slides?.map((item: string, index: number) => {
                     return (<span className={index === currentSlideIndex ? 'dot active' : 'dot'} key={index} onClick={() => goto(index)}></span>)
                 })}
 

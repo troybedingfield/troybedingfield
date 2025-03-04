@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 import Button from '../Button/Button'
 import TestCodeBlock from '../TestCodeBlock/TestCodeBlock'
 import './TestButton.scss'
@@ -20,10 +20,10 @@ export default function TestButton({ ...props }) {
 
     // console.log(userInput);
 
-    function handleChange(e: any, inputIdentifier: string, newValue: any) {
-
-        if (e.target.type === 'checkbox') {
-            newValue = e.target.value = e.target.checked;
+    function handleChange(e: ChangeEvent<HTMLElement>, inputIdentifier: string, newValue: string) {
+        console.log(e.target)
+        if ((e.target as HTMLFormElement).type === 'checkbox') {
+            newValue = ((e.target as HTMLFormElement).value as string) = ((e.target as HTMLFormElement).checked as string);
         }
 
         // console.log(inputIdentifier, newValue)
@@ -74,9 +74,9 @@ export default function TestButton({ ...props }) {
 
 
 
-    function onChange() {
+    // function onChange() {
 
-    }
+    // }
 
     return (
         <div className="test-container">

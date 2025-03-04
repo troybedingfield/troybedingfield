@@ -1,9 +1,9 @@
 import { ReactElement, useCallback, useEffect, useRef, useState } from "react"
 
-export function useCarousel(slides: ReactElement[], interval?: number, automatic?: boolean) {
+export function useCarousel(slides: string[], interval?: number, automatic?: boolean) {
     const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
-    const [isAutomatic, setAutomatic] = useState(automatic ? true : false);
-    const [autoInterval, setInterval] = useState(interval ? interval : 0);
+    const [isAutomatic, setAutomatic] = useState(automatic ?? false);
+    const [autoInterval, setInterval] = useState(interval ?? 0);
     const [isPlaying, setIsPlaying] = useState(true);
 
     const timerRef = useRef<number | null>(null);
@@ -15,8 +15,8 @@ export function useCarousel(slides: ReactElement[], interval?: number, automatic
     //         setCurrentSlideIndex(next === slides!.length ? 0 : next);
     // }
     const next = useCallback(() => {
-        let next = currentSlideIndex + 1;
-        setCurrentSlideIndex(next === slides!.length ? 0 : next);
+        const next = currentSlideIndex + 1;
+        setCurrentSlideIndex(next === slides.length ? 0 : next);
     }, [currentSlideIndex, slides])
 
     function goto(index: number) {
@@ -44,8 +44,8 @@ export function useCarousel(slides: ReactElement[], interval?: number, automatic
     }, [autoInterval, slides.length, currentSlideIndex, isAutomatic, isPlaying, next]);
 
     function back() {
-        let previous = currentSlideIndex - 1;
-        setCurrentSlideIndex(previous < 0 ? slides!.length - 1 : previous);
+        const previous = currentSlideIndex - 1;
+        setCurrentSlideIndex(previous < 0 ? slides.length - 1 : previous);
 
     }
 

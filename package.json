@@ -10,7 +10,10 @@
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.0.9",
+    "@types/eslint": "^9.6.1",
     "@types/react-google-recaptcha": "^2.1.9",
+    "@typescript-eslint/eslint-plugin": "^8.26.0",
+    "@typescript-eslint/parser": "^8.26.0",
     "babel-plugin-react-compiler": "19.0.0-beta-40c6c23-20250301",
     "motion": "^12.4.10",
     "next": "^15.2.1",

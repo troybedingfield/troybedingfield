@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useRef, useState } from 'react';
+import { type RefObject, useEffect, useRef, useState } from 'react';
 import './MobileMenu.scss'
 import { AnimatePresence, motion } from 'motion/react';
 
@@ -8,18 +8,21 @@ import { AnimatePresence, motion } from 'motion/react';
 
 
 
-export default function MobileMenu({ ...props }) {
-    const { children, menuItems, handleMobileMenuClick } = props
+export default function MobileMenu(props: {
+    menuItems: (string | string[])[],
+    handleMobileMenuClick: (item: string) => void
+}) {
+    const { menuItems, handleMobileMenuClick } = props
 
     const [isOpen, setIsOpen] = useState(false);
 
 
 
-    const [dropdownValue, setDropdownValue] = useState(menuItems[0]);
+    const [, setDropdownValue] = useState(menuItems[0]);
 
     // console.log(dropdownValue);
 
-    const dropdown = useRef<any | undefined>();
+    const dropdown = useRef<HTMLDivElement | null>(null);
 
     useOutsideClick(dropdown);
 
@@ -30,7 +33,7 @@ export default function MobileMenu({ ...props }) {
         }
     }
 
-    function handleDropdownClick(item: any) {
+    function handleDropdownClick(item: string) {
         // console.log(item)
         setDropdownValue(item);
         handleMobileMenuClick(item);
@@ -40,11 +43,14 @@ export default function MobileMenu({ ...props }) {
     /**
  * Hook that alerts clicks outside of the passed ref
  */
-    function useOutsideClick(ref: any) {
+    function useOutsideClick(ref: RefObject<HTMLDivElement | null>) {
 
         useEffect(() => {
-            function handleClickOutside(event: any) {
-                if (ref.current && !ref.current.contains(event.target)) {
+
+            const handleClickOutside = (event: MouseEvent) => {
+                // console.log(event.target)
+                if (ref.current && !ref.current.contains(event.target as HTMLDivElement)) {
+                    // console.log(ref.current.contains(event.target))
                     handleMenuIconClick();
                 }
             }
@@ -94,10 +100,10 @@ export default function MobileMenu({ ...props }) {
                     
                     </a> */}
 
-                        {menuItems.map((item: any, index: number) => {
+                        {menuItems.map((item: string | string[], index: number) => {
                             if (Array.isArray(item)) {
 
-                                return (item.map((subItem: any, subIndex: number) => {
+                                return (item.map((subItem: string, subIndex: number) => {
                                     return (<motion.a initial={{ opacity: 0 }}
                                         animate={{ opacity: 1, }}
                                         transition={{ delay: 0.1 }}

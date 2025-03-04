@@ -43,6 +43,16 @@ export default function TestButtonButton({ children, ...props }: ButtonProps) {
     } = props
 
     return (
-        <button style={{ minWidth: minWidth ? minWidth + 'px' : '', maxWidth: maxWidth ? maxWidth + 'px' : '', minHeight: minHeight ? minHeight + 'px' : '', maxHeight: maxHeight ? maxHeight + 'px' : '', backgroundColor: customBGColor, color: customColor, borderColor: customBorderColor }} className={[color, fill, size, border ? 'border' : '', uppercase ? 'text-uppercase' : '', classNames ? classNames : ''].join(' ')} onClick={buttonClick} formAction={formAction} disabled={disabled}>{children}</button>
+        <button
+            style={{ minWidth: minWidth + 'px', maxWidth: maxWidth + 'px', minHeight: minHeight + 'px', maxHeight: maxHeight + 'px', backgroundColor: customBGColor, color: customColor, borderColor: customBorderColor }}
+            // eslint-disable-next-line
+            className={[color, fill, size, border ?? 'border', uppercase ? 'text-uppercase' : '', classNames ? classNames : ''].join(' ')}
+            onClick={buttonClick}
+            formAction={formAction}
+            disabled={disabled}>
+            {children}
+        </button>
+
+
     )
 }

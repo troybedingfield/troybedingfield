@@ -20,7 +20,7 @@ export default function Header({ ...props }) {
 
     } = props
 
-    function handleButtonClick(item: any) {
+    function handleButtonClick(item: string) {
         if (item === 'PDF') {
             window.open('troy-bedingfield-resume.pdf');
         } else if (item === 'DOC') {
@@ -30,7 +30,7 @@ export default function Header({ ...props }) {
         }
     }
 
-    function handleMobileMenuClick(item: any) {
+    function handleMobileMenuClick(item: string) {
         if (item === 'Home') {
             router.push('/')
         } else if (item === 'Design') {
