@@ -9,7 +9,7 @@ import Contact from "./components/Contact/Contact";
 import Toast from "./components/Toast/Toast";
 import TestButton from "./components/TestButton/TestButton";
 import { motion, MotionConfig, useMotionTemplate, useMotionValue, animate } from "motion/react";
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 
 
 export default function Home() {
@@ -19,10 +19,13 @@ export default function Home() {
     window.open('https://troybedingfield.github.io/tb-ui/?path=/docs/components-button--docs')
   }
 
-  const COLORS = ["#13FFAA", "#DD335C"];
+  // const COLORS = ["#13FFAA", "#DD335C"];
+  const COLORS = useMemo(() => ["#13FFAA", "#DD335C"], []);
   // const COLORS = ["#004F76", "#000000"];
-  const PERCETAGES = ["20%", "75%"];
-  const PERCETAGESSIZES = ["75%", "95%"];
+  // const PERCETAGES = ["20%", "75%"];
+  const PERCETAGES = useMemo(() => ["20%", "75%"], []);
+  // const PERCETAGESSIZES = ["75%", "95%"];
+  const PERCETAGESSIZES = useMemo(() => ["75%", "95%"], []);
   const color = useMotionValue(COLORS[0]);
   const percentage = useMotionValue(PERCETAGES[0]);
   const percentagesize = useMotionValue(PERCETAGESSIZES[0]);
@@ -46,7 +49,7 @@ export default function Home() {
       repeat: Infinity,
       repeatType: 'mirror'
     })
-  }, [])
+  }, [color, COLORS, percentage, PERCETAGES, percentagesize, PERCETAGESSIZES])
 
   return (
 

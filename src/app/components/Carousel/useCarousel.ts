@@ -1,4 +1,4 @@
-import { ReactElement, useEffect, useRef, useState } from "react"
+import { ReactElement, useCallback, useEffect, useRef, useState } from "react"
 
 export function useCarousel(slides: ReactElement[], interval?: number, automatic?: boolean) {
     const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
@@ -8,30 +8,16 @@ export function useCarousel(slides: ReactElement[], interval?: number, automatic
 
     const timerRef = useRef<number | null>(null);
 
-    useEffect(() => {
-        if (autoInterval > 0 && isAutomatic && isPlaying) {
-            timerRef.current = window.setInterval(next, autoInterval);
-        }
 
-        return () => {
-            if (timerRef.current) {
-                clearInterval(timerRef.current);
-            }
-        };
-    }, [autoInterval, slides.length, currentSlideIndex, isAutomatic, isPlaying]);
 
-    function back() {
-        let previous = currentSlideIndex - 1;
-        setCurrentSlideIndex(previous < 0 ? slides!.length - 1 : previous);
-
-    }
-
-    function next() {
+    //     function next() {
+    //         let next = currentSlideIndex + 1;
+    //         setCurrentSlideIndex(next === slides!.length ? 0 : next);
+    // }
+    const next = useCallback(() => {
         let next = currentSlideIndex + 1;
         setCurrentSlideIndex(next === slides!.length ? 0 : next);
-
-
-    }
+    }, [currentSlideIndex, slides])
 
     function goto(index: number) {
         setCurrentSlideIndex(index);
@@ -45,6 +31,23 @@ export function useCarousel(slides: ReactElement[], interval?: number, automatic
         setIsPlaying(true);
     };
 
+    useEffect(() => {
+        if (autoInterval > 0 && isAutomatic && isPlaying) {
+            timerRef.current = window.setInterval(next, autoInterval);
+        }
+
+        return () => {
+            if (timerRef.current) {
+                clearInterval(timerRef.current);
+            }
+        };
+    }, [autoInterval, slides.length, currentSlideIndex, isAutomatic, isPlaying, next]);
+
+    function back() {
+        let previous = currentSlideIndex - 1;
+        setCurrentSlideIndex(previous < 0 ? slides!.length - 1 : previous);
+
+    }
 
 
 
