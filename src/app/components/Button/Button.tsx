@@ -4,6 +4,7 @@ import './Button.scss'
 
 type ButtonProps = Readonly<{
     children?: string,
+    type?: "submit" | "reset" | "button" | undefined,
     color?: 'default' | 'primary' | 'secondary' | 'error' | 'warning' | 'success' | 'disabled' | undefined,
     fill?: 'solid' | 'outline' | 'clear' | undefined,
     border?: 'true' | undefined,
@@ -39,12 +40,19 @@ export default function Button({ children, ...props }: ButtonProps) {
         customColor,
         buttonClick,
         formAction,
-        classNames
+        classNames,
+        type,
     } = props
 
     return (
         <button
-            style={{ minWidth: minWidth + 'px', maxWidth: maxWidth + 'px', minHeight: minHeight + 'px', maxHeight: maxHeight + 'px', backgroundColor: customBGColor, color: customColor, borderColor: customBorderColor }}
+            type={type}
+            style={{
+                ...(minWidth && { minWidth: minWidth + 'px' }),
+                ...(maxWidth && { maxWidth: maxWidth + 'px' }),
+                ...(minHeight && { minHeight: minHeight + 'px' }),
+                ...(customBGColor && { backgroundColor: customBGColor })
+            }}
             className={[color, fill, size, border ?? '', uppercase ?? '', classNames ?? classNames].join(' ')}
             onClick={buttonClick}
             formAction={formAction}
